@@ -25,7 +25,7 @@
 {
 
 
-    
+    /*
     ShapeClass *ShapeInfo = [[ShapeClass alloc] init];
     if(ShapeInfo != nil)
         {
@@ -33,7 +33,7 @@
             [ShapeInfo GetNumSides];
             
         }
-    
+    */
     
     textlabel1 = [[UILabel alloc] initWithFrame:CGRectMake(0, 25, 320, 100)];
     textlabel1.backgroundColor = [UIColor yellowColor]; 
@@ -52,11 +52,12 @@
     
     
     
-    ShapeFactory *newShape = [[ShapeFactory alloc] init];
-    if (newShape != nil) {
-        ShapeClass *Triangle = [newShape CreateShape:0];
-        [ Triangle GetName];
-        
+    ShapeFactory *_triangle = [[ShapeFactory alloc] init];
+    if (_triangle != nil) {
+        ShapeClass *theShape = [_triangle CreateShape:0];
+        //ShapeClass *mySides = [_triangle sides];
+        [theShape GetNumSides];
+        [theShape GetName];
     }
     
     
