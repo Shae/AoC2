@@ -24,6 +24,8 @@
 - (void)viewDidLoad
 {
 
+
+    
     ShapeClass *ShapeInfo = [[ShapeClass alloc] init];
     if(ShapeInfo != nil)
         {
@@ -47,6 +49,18 @@
     textlabel3.backgroundColor = [UIColor redColor]; 
     textlabel3.text = @"TEST3";
     [self.view addSubview:textlabel3];
+    
+    
+    
+    ShapeFactory *newShape = [[ShapeFactory alloc] init];
+    if (newShape != nil) {
+        ShapeClass *Triangle = [newShape CreateShape:0];
+        [ Triangle GetName];
+        
+    }
+    
+    
+    
     
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
