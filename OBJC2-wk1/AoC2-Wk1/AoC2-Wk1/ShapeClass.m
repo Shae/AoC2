@@ -18,9 +18,25 @@
             {
                 numSides = 0;
                 name = @"None";
+                base = 0;
+                height = 0;
             }
         return self;
     };
+
+
+-(void)setAttr:(EShapeType)type shapeName:(NSString *)shapeName sides:(int)sides howLong:(int)howLong howHigh:(int)howHigh
+{
+    shapeType = type;
+    name = shapeName;
+    base = howLong;
+    height = howHigh;
+    numSides = sides;
+    
+}
+
+
+
 
 
 
@@ -40,8 +56,7 @@
 
 -(int)GetArea
 {
-
-    return 0;
+    return;
 }
 
 @end
