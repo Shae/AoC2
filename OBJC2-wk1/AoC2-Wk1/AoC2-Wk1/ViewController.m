@@ -21,16 +21,15 @@
     ShapeClass *ShapeInfo = [[ShapeClass alloc] init];
     if(ShapeInfo != nil)
         {
-            ShapeInfo.numSides = 3;
-            ShapeInfo.name = @"Triangle";
-            NSLog(@"The shape is a %@ and has %d sides", ShapeInfo.name, ShapeInfo.numSides);
+            [ShapeInfo GetName];
+            [ShapeInfo GetNumSides];
             
         }
     
     
     textlabel1 = [[UILabel alloc] initWithFrame:CGRectMake(0, 25, 320, 100)];
     textlabel1.backgroundColor = [UIColor yellowColor]; 
-    textlabel1.text = @"The shape is a %@ and has %d sides", ShapeInfo.name, ShapeInfo.numSides;
+    textlabel1.text = @"TEST1";
     [self.view addSubview:textlabel1];
     
     textlabel2 = [[UILabel alloc] initWithFrame:CGRectMake(0, 150, 320, 100)];

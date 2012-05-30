@@ -17,25 +17,31 @@
         if (self != nil)
             {
                 numSides = 0;
-                name = @"No Name Yet";
+                name = @"None";
             }
-        
         return self;
     };
 
+
+
 -(int)GetNumSides
 {
-    NSLog(@"Number of Sides is %i", numSides );
+    NSLog(@"Number of sides is %i", numSides );
+    return numSides;
 }
+
+
 
 -(NSString*)GetName
 {
-     NSLog(@"My name is %@", name );
+     NSLog(@"This is a %@", name );
+    return name;
 }
 
 -(int)GetArea
 {
-     NSLog(@"My name is %@", name );
+
+    return 0;
 }
 
 @end

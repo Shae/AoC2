@@ -16,6 +16,10 @@
 		BFBC9B5F1575670A00F4AE3C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBC9B5E1575670A00F4AE3C /* ViewController.m */; };
 		BFBC9B621575670A00F4AE3C /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFBC9B601575670A00F4AE3C /* ViewController.xib */; };
 		BFBC9B6A15756C2E00F4AE3C /* ShapeClass.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBC9B6915756C2E00F4AE3C /* ShapeClass.m */; };
+		BFBC9B711575DDAA00F4AE3C /* TriangleClass.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBC9B701575DDAA00F4AE3C /* TriangleClass.m */; };
+		BFBC9B741575DDC100F4AE3C /* SquareClass.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBC9B731575DDC100F4AE3C /* SquareClass.m */; };
+		BFBC9B771575DDE100F4AE3C /* RectangleClass.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBC9B761575DDE100F4AE3C /* RectangleClass.m */; };
+		BFBC9B7A1575DE2600F4AE3C /* ShapeFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBC9B791575DE2600F4AE3C /* ShapeFactory.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +38,14 @@
 		BFBC9B611575670A00F4AE3C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
 		BFBC9B6815756C2E00F4AE3C /* ShapeClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShapeClass.h; sourceTree = "<group>"; };
 		BFBC9B6915756C2E00F4AE3C /* ShapeClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShapeClass.m; sourceTree = "<group>"; };
+		BFBC9B6F1575DDAA00F4AE3C /* TriangleClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TriangleClass.h; sourceTree = "<group>"; };
+		BFBC9B701575DDAA00F4AE3C /* TriangleClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TriangleClass.m; sourceTree = "<group>"; };
+		BFBC9B721575DDC100F4AE3C /* SquareClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SquareClass.h; sourceTree = "<group>"; };
+		BFBC9B731575DDC100F4AE3C /* SquareClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SquareClass.m; sourceTree = "<group>"; };
+		BFBC9B751575DDE100F4AE3C /* RectangleClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RectangleClass.h; sourceTree = "<group>"; };
+		BFBC9B761575DDE100F4AE3C /* RectangleClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RectangleClass.m; sourceTree = "<group>"; };
+		BFBC9B781575DE2600F4AE3C /* ShapeFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShapeFactory.h; sourceTree = "<group>"; };
+		BFBC9B791575DE2600F4AE3C /* ShapeFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShapeFactory.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +100,14 @@
 				BFBC9B521575670A00F4AE3C /* Supporting Files */,
 				BFBC9B6815756C2E00F4AE3C /* ShapeClass.h */,
 				BFBC9B6915756C2E00F4AE3C /* ShapeClass.m */,
+				BFBC9B6F1575DDAA00F4AE3C /* TriangleClass.h */,
+				BFBC9B701575DDAA00F4AE3C /* TriangleClass.m */,
+				BFBC9B721575DDC100F4AE3C /* SquareClass.h */,
+				BFBC9B731575DDC100F4AE3C /* SquareClass.m */,
+				BFBC9B751575DDE100F4AE3C /* RectangleClass.h */,
+				BFBC9B761575DDE100F4AE3C /* RectangleClass.m */,
+				BFBC9B781575DE2600F4AE3C /* ShapeFactory.h */,
+				BFBC9B791575DE2600F4AE3C /* ShapeFactory.m */,
 			);
 			path = "AoC2-Wk1";
 			sourceTree = "<group>";
@@ -169,6 +189,10 @@
 				BFBC9B5C1575670A00F4AE3C /* AppDelegate.m in Sources */,
 				BFBC9B5F1575670A00F4AE3C /* ViewController.m in Sources */,
 				BFBC9B6A15756C2E00F4AE3C /* ShapeClass.m in Sources */,
+				BFBC9B711575DDAA00F4AE3C /* TriangleClass.m in Sources */,
+				BFBC9B741575DDC100F4AE3C /* SquareClass.m in Sources */,
+				BFBC9B771575DDE100F4AE3C /* RectangleClass.m in Sources */,
+				BFBC9B7A1575DE2600F4AE3C /* ShapeFactory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
