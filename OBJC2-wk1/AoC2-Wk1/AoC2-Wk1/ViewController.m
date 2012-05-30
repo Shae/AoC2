@@ -58,6 +58,8 @@
         //ShapeClass *mySides = [_triangle sides];
         [theShape GetNumSides];
         [theShape GetName];
+        [theShape GetArea];
+        
     }
     
     

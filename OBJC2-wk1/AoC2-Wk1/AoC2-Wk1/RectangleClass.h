@@ -9,5 +9,5 @@
 #import "ShapeClass.h"
 
 @interface RectangleClass : ShapeClass
-
+-(int)GetArea;
 @end

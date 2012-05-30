@@ -25,7 +25,7 @@
     };
 
 
--(id)setAttr:(EShapeType)type shapeName:(NSString *)shapeName sides:(int)sides howLong:(int)howLong howHigh:(int)howHigh
+-(id)setAttr:(EShapeType)type shapeName:(NSString *)shapeName howLong:(int)howLong howHigh:(int)howHigh
 {
     if (self != nil )
     {
@@ -33,7 +33,7 @@
         name = shapeName;
         base = howLong;
         height = howHigh;
-        numSides = sides;
+        numSides = 0;
     }
     return self;
 }
@@ -57,9 +57,6 @@
     return name;
 }
 
--(int)GetArea
-{
-    return 0;
-}
+-(int)GetArea{return nil;};
 
 @end

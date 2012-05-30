@@ -9,5 +9,5 @@
 #import "ShapeClass.h"
 
 @interface SquareClass : ShapeClass
-
+-(int)GetArea;
 @end

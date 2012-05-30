@@ -25,7 +25,7 @@ typedef enum
         int height;
 }
 
--(id)setAttr:(EShapeType)type shapeName:(NSString *)shapeName sides:(int)sides howLong:(int)howLong howHigh:(int)howHigh;
+-(id)setAttr:(EShapeType)type shapeName:(NSString *)shapeName howLong:(int)howLong howHigh:(int)howHigh;
 
 
 

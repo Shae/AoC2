@@ -9,5 +9,5 @@
 #import "ShapeClass.h"
 
 @interface TriangleClass : ShapeClass
-
+-(int)GetArea;
 @end

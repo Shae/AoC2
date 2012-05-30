@@ -14,9 +14,17 @@
 {
     if (self = [super init]) 
     {    
-        [self setAttr:SHAPETYPE_TRIANGLE shapeName:@"Triangle" sides:3 howLong:10 howHigh:15];
+        [self setAttr:SHAPETYPE_TRIANGLE shapeName:@"Triangle" howLong:10 howHigh:15];
+        numSides = 3;
     }
     return self;
 }
 
+-(int)GetArea
+{
+    int area = (int) 0.5f * (base * height);
+    NSLog(@"The Area of the Triangle is %i", area);
+    return area;
+    
+}
 @end
