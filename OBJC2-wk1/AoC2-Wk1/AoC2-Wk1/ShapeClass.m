@@ -15,29 +15,27 @@
     {
         self = [super init];
         if (self != nil)
-        {
-            numSides = 4;
-            name = @"Test Test";
-        }
+            {
+                numSides = 0;
+                name = @"No Name Yet";
+            }
+        
         return self;
     };
 
 -(int)GetNumSides
 {
-    return numSides;
+    NSLog(@"Number of Sides is %i", numSides );
 }
 
 -(NSString*)GetName
 {
-    nameIt = [NSString stringWithFormat:@"the shape is a %@", name];
-    if (nameIt != nil)
-        {
-            return nameIt;
-        }
-    
-    return @"Error";
-    
+     NSLog(@"My name is %@", name );
 }
 
+-(int)GetArea
+{
+     NSLog(@"My name is %@", name );
+}
 
 @end

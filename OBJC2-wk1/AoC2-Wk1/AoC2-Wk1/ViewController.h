@@ -7,12 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
-@class ShapeClass;
+#import "ShapeClass.h"
+
+
+
+
 
 @interface ViewController : UIViewController
 {
-    UILabel *textlabel;
-    ShapeClass *ShapeClass1;
-    
+    UILabel *textlabel1;
+    UILabel *textlabel2;
+    UILabel *textlabel3;
 }
+
+
 @end

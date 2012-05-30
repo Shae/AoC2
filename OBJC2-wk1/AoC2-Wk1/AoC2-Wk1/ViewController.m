@@ -17,15 +17,32 @@
 
 - (void)viewDidLoad
 {
-    textlabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 320, 100)];
-    ShapeClass1 = [[ShapeClass alloc] init];
-    if(ShapeClass1 != nil)
-    {
-        
-    }
+
+    ShapeClass *ShapeInfo = [[ShapeClass alloc] init];
+    if(ShapeInfo != nil)
+        {
+            ShapeInfo.numSides = 3;
+            ShapeInfo.name = @"Triangle";
+            NSLog(@"The shape is a %@ and has %d sides", ShapeInfo.name, ShapeInfo.numSides);
+            
+        }
     
-    [self.view addSubview:textlabel];
-    textlabel.text = [ShapeClass1 GetName];
+    
+    textlabel1 = [[UILabel alloc] initWithFrame:CGRectMake(0, 25, 320, 100)];
+    textlabel1.backgroundColor = [UIColor yellowColor]; 
+    textlabel1.text = @"The shape is a %@ and has %d sides", ShapeInfo.name, ShapeInfo.numSides;
+    [self.view addSubview:textlabel1];
+    
+    textlabel2 = [[UILabel alloc] initWithFrame:CGRectMake(0, 150, 320, 100)];
+    textlabel2.backgroundColor = [UIColor orangeColor]; 
+    textlabel2.text = @"TEST2";
+    [self.view addSubview:textlabel2];
+    
+    textlabel3 = [[UILabel alloc] initWithFrame:CGRectMake(0, 275, 320, 100)];
+    textlabel3.backgroundColor = [UIColor redColor]; 
+    textlabel3.text = @"TEST3";
+    [self.view addSubview:textlabel3];
+    
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
