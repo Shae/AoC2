@@ -36,20 +36,24 @@
     */
     self.view.backgroundColor = [UIColor blackColor];
     
+    
     textlabel1 = [[UILabel alloc] initWithFrame:CGRectMake(0, 25, 320, 100)];
-    textlabel1.backgroundColor = [UIColor yellowColor]; 
+    textlabel1.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"TriBG.jpg"]];
+    //textlabel1.backgroundColor = [UIColor yellowColor]; 
     textlabel1.text = @"TEST1";
     textlabel1.textAlignment = UITextAlignmentCenter; 
     [self.view addSubview:textlabel1];
 
     textlabel2 = [[UILabel alloc] initWithFrame:CGRectMake(0, 150, 320, 100)];
-    textlabel2.backgroundColor = [UIColor orangeColor]; 
+    textlabel2.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"SqrBG.jpg"]];
+    //textlabel2.backgroundColor = [UIColor orangeColor]; 
     textlabel2.text = @"TEST2";
     textlabel2.textAlignment = UITextAlignmentCenter; 
     [self.view addSubview:textlabel2];
     
     textlabel3 = [[UILabel alloc] initWithFrame:CGRectMake(0, 275, 320, 100)];
-    textlabel3.backgroundColor = [UIColor redColor]; 
+    textlabel3.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"RectBG.jpg"]];
+    //textlabel3.backgroundColor = [UIColor redColor]; 
     textlabel3.text = @"TEST3";
     textlabel3.textAlignment = UITextAlignmentCenter; 
     [self.view addSubview:textlabel3];
@@ -69,7 +73,7 @@
         [theShape setBase:20];
         [theShape setHeight:25];
         [theShape GetNumSides];
-        textlabel1.text = [NSString stringWithFormat:@"Shape %@ Area: %i",[theShape GetName], [theShape GetArea]];
+        textlabel1.text = [NSString stringWithFormat:@"Shape: %@    Area: %i",[theShape GetName], [theShape GetArea]];
     }  
     
     ShapeFactory *factoryItem2 = [[ShapeFactory alloc] init];
@@ -78,7 +82,7 @@
         [theShape2 setBase:20];
         [theShape2 setHeight:20];
         [theShape2 GetNumSides];  
-        textlabel2.text = [NSString stringWithFormat:@"Shape %@ Area: %i",[theShape2 GetName], [theShape2 GetArea]];
+        textlabel2.text = [NSString stringWithFormat:@"Shape: %@    Area: %i",[theShape2 GetName], [theShape2 GetArea]];
     } 
     
     ShapeFactory *factoryItem3 = [[ShapeFactory alloc] init];
@@ -87,7 +91,7 @@
         [theShape3 setBase:20];
         [theShape3 setHeight:25];
         [theShape3 GetNumSides];
-        textlabel3.text = [NSString stringWithFormat:@"Shape %@ Area: %i",[theShape3 GetName], [theShape3 GetArea]];
+        textlabel3.text = [NSString stringWithFormat:@"Shape: %@    Area: %i",[theShape3 GetName], [theShape3 GetArea]];
     } 
     
     

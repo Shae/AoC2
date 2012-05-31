@@ -20,6 +20,12 @@
 		BFBC9B741575DDC100F4AE3C /* SquareClass.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBC9B731575DDC100F4AE3C /* SquareClass.m */; };
 		BFBC9B771575DDE100F4AE3C /* RectangleClass.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBC9B761575DDE100F4AE3C /* RectangleClass.m */; };
 		BFBC9B7A1575DE2600F4AE3C /* ShapeFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBC9B791575DE2600F4AE3C /* ShapeFactory.m */; };
+		BFBC9B80157730CB00F4AE3C /* Rect.png in Resources */ = {isa = PBXBuildFile; fileRef = BFBC9B7F157730CB00F4AE3C /* Rect.png */; };
+		BFBC9B82157730DB00F4AE3C /* Tri.png in Resources */ = {isa = PBXBuildFile; fileRef = BFBC9B81157730DB00F4AE3C /* Tri.png */; };
+		BFBC9B84157730E900F4AE3C /* Sqr.png in Resources */ = {isa = PBXBuildFile; fileRef = BFBC9B83157730E900F4AE3C /* Sqr.png */; };
+		BFBC9B861577D40500F4AE3C /* TriBG.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BFBC9B851577D40500F4AE3C /* TriBG.jpg */; };
+		BFBC9B881577D71100F4AE3C /* SqrBG.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BFBC9B871577D71100F4AE3C /* SqrBG.jpg */; };
+		BFBC9B8A1577D71800F4AE3C /* RectBG.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BFBC9B891577D71800F4AE3C /* RectBG.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +52,12 @@
 		BFBC9B761575DDE100F4AE3C /* RectangleClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RectangleClass.m; sourceTree = "<group>"; };
 		BFBC9B781575DE2600F4AE3C /* ShapeFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShapeFactory.h; sourceTree = "<group>"; };
 		BFBC9B791575DE2600F4AE3C /* ShapeFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShapeFactory.m; sourceTree = "<group>"; };
+		BFBC9B7F157730CB00F4AE3C /* Rect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Rect.png; sourceTree = "<group>"; };
+		BFBC9B81157730DB00F4AE3C /* Tri.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tri.png; sourceTree = "<group>"; };
+		BFBC9B83157730E900F4AE3C /* Sqr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sqr.png; sourceTree = "<group>"; };
+		BFBC9B851577D40500F4AE3C /* TriBG.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = TriBG.jpg; sourceTree = "<group>"; };
+		BFBC9B871577D71100F4AE3C /* SqrBG.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SqrBG.jpg; sourceTree = "<group>"; };
+		BFBC9B891577D71800F4AE3C /* RectBG.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = RectBG.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +127,12 @@
 		BFBC9B521575670A00F4AE3C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BFBC9B891577D71800F4AE3C /* RectBG.jpg */,
+				BFBC9B871577D71100F4AE3C /* SqrBG.jpg */,
+				BFBC9B851577D40500F4AE3C /* TriBG.jpg */,
+				BFBC9B83157730E900F4AE3C /* Sqr.png */,
+				BFBC9B81157730DB00F4AE3C /* Tri.png */,
+				BFBC9B7F157730CB00F4AE3C /* Rect.png */,
 				BFBC9B531575670A00F4AE3C /* AoC2-Wk1-Info.plist */,
 				BFBC9B541575670A00F4AE3C /* InfoPlist.strings */,
 				BFBC9B571575670A00F4AE3C /* main.m */,
@@ -175,6 +193,12 @@
 			files = (
 				BFBC9B561575670A00F4AE3C /* InfoPlist.strings in Resources */,
 				BFBC9B621575670A00F4AE3C /* ViewController.xib in Resources */,
+				BFBC9B80157730CB00F4AE3C /* Rect.png in Resources */,
+				BFBC9B82157730DB00F4AE3C /* Tri.png in Resources */,
+				BFBC9B84157730E900F4AE3C /* Sqr.png in Resources */,
+				BFBC9B861577D40500F4AE3C /* TriBG.jpg in Resources */,
+				BFBC9B881577D71100F4AE3C /* SqrBG.jpg in Resources */,
+				BFBC9B8A1577D71800F4AE3C /* RectBG.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
