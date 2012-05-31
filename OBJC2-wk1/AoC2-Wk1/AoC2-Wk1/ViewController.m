@@ -52,10 +52,9 @@
     
     
     
-    ShapeFactory *_triangle = [[ShapeFactory alloc] init];
-    if (_triangle != nil) {
-        ShapeClass *theShape = [_triangle CreateShape:0];
-        //ShapeClass *mySides = [_triangle sides];
+    ShapeFactory *factoryItem = [[ShapeFactory alloc] init];
+    if (factoryItem != nil) {
+        TriangleClass *theShape = (TriangleClass*)[factoryItem CreateShape:0];
         [theShape GetNumSides];
         [theShape GetName];
         [theShape GetArea];

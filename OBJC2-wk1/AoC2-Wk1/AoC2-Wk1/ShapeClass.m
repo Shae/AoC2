@@ -57,6 +57,6 @@
     return name;
 }
 
--(int)GetArea{return nil;};
+-(int)GetArea{return 0;};
 
 @end
