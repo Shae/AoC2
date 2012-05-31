@@ -12,7 +12,8 @@ typedef enum
 {
     SHAPETYPE_SQUARE=0,
     SHAPETYPE_TRIANGLE,
-    SHAPETYPE_RECTANGLE
+    SHAPETYPE_RECTANGLE,
+    SHAPETYPE_DEFAULT
 }EShapeType;
 
 @interface ShapeClass : NSObject
@@ -23,10 +24,10 @@ typedef enum
         int numSides;
         int base;
         int height;
+        int area;
 }
 
--(id)setAttr:(EShapeType)type 
-   shapeName:(NSString *)shapeName;
+//-(id)setAttr:(EShapeType)type shapeName:(NSString *)shapeName;
 
 
 
@@ -38,5 +39,7 @@ typedef enum
 -(int)GetNumSides;
 -(NSString*)GetName;
 -(int)GetArea;
+-(void)setBase :(int)newBase;
+-(void)setHeight : (int)newHeight;
 
 @end

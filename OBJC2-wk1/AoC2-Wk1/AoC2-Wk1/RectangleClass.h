@@ -9,8 +9,9 @@
 #import "ShapeClass.h"
 
 @interface RectangleClass : ShapeClass
--(int)GetArea;
 -(int)GetNumSides;
 -(NSString*)GetName;
-
+-(int)GetArea;
+-(void)setBase :(int)newBase;
+-(void)setHeight : (int)newHeight;
 @end

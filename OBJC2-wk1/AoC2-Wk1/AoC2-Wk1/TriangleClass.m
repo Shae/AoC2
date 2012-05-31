@@ -14,14 +14,26 @@
 {
     if (self = [super init]) 
     {    
-        [self setAttr:SHAPETYPE_TRIANGLE shapeName:@"Triangle"];
-    
+        shapeType = 0;
+        name = @"Triangle";
         base = 10;
         height = 15;
         numSides = 3;
     }
     return self;
 }
+-(void)setBase :(int)newBase 
+{
+    base = newBase;
+}
+
+-(void)setHeight : (int)newHeight
+{
+    height = newHeight;
+    area = (int) (0.5f * (base * height));
+}
+
+
 
 -(int)GetNumSides
 {
@@ -36,6 +48,14 @@
     NSLog(@"This is a %@", name );
     return name;
 }
+
+-(int)GetArea
+{
+      NSLog(@"The Area of the %@ is %i", name, area);
+    return area;
+};
+
+/*
 -(int)GetArea
 {
     int area = (int) (0.5f * (base * height));
@@ -43,4 +63,5 @@
     return area;
     
 }
+ */
 @end

@@ -57,13 +57,16 @@
     ShapeFactory *factoryItem = [[ShapeFactory alloc] init];
     if (factoryItem != nil) {
         TriangleClass *theShape = (TriangleClass*)[factoryItem CreateShape:0];
+        [theShape setBase:20];
+        [theShape setHeight:25];
         [theShape GetNumSides];
         [theShape GetName];
         [theShape GetArea];
+        textlabel1.text = @"Shape %@ Area: %i",[theShape GetName], [theShape GetArea];
         
     }  
     
-    
+
     
     
     [super viewDidLoad];

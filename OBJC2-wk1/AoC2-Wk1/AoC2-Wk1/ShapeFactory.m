@@ -17,11 +17,11 @@
 -(ShapeClass*)CreateShape : (NSInteger)shapeCode
 {
    if(shapeCode == 0){
-       return [[[TriangleClass alloc]init]setAttr:SHAPETYPE_TRIANGLE shapeName:@"Triangle"];
+        return [[TriangleClass alloc]init]; 
     }else if(shapeCode == 1){
-        return [[[SquareClass alloc]init]setAttr:SHAPETYPE_SQUARE shapeName:@"Square"];
+        return [[SquareClass alloc]init];
     }else if(shapeCode == 2){
-        return [[[RectangleClass alloc]init]setAttr:SHAPETYPE_RECTANGLE shapeName:@"Rectangle"];
+        return [[RectangleClass alloc]init];
     }
     return nil;
 };

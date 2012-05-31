@@ -14,21 +14,25 @@
 {
     if (self = [super init]) 
     {    
-        [self setAttr:SHAPETYPE_RECTANGLE shapeName:@"Rectangle"];
+        shapeType = 0;
+        name = @"Rectangle";
         base = 20;
-        height = 15;
+        height = 10;
         numSides = 4;
     }
     return self;
 }
 
--(int)GetArea
+-(void)setBase :(int)newBase 
 {
-    int area = (int)(base * height);
-    NSLog(@"The Area of the Rectangle is %i", area);
-    return area;
-    
+    base = newBase;
 }
+
+-(void)setHeight : (int)newHeight
+{
+    height = newHeight;
+}
+
 
 
 -(int)GetNumSides
@@ -38,9 +42,16 @@
 }
 
 
+
 -(NSString*)GetName
 {
     NSLog(@"This is a %@", name );
     return name;
 }
+
+-(int)GetArea
+{
+      NSLog(@"The Area of the %@ is %i", name, area);
+    return area;
+};
 @end

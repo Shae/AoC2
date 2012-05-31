@@ -14,21 +14,27 @@
 {
     if (self = [super init]) 
     {    
-        [self setAttr:SHAPETYPE_SQUARE shapeName:@"Square"];
-        base = 10;
-        height = 10;
+        shapeType = 1;
+        name = @"Square";
+        base = 15;
+        height = 15;
         numSides = 4;
     }
     return self;
 }   
 
--(int)GetArea
-    {
-        int area = (int)(base * height);
-        NSLog(@"The Area of the Square is %i", area);
-        return area;
-        
-    }
+-(void)setBase :(int)newBase 
+{
+    base = newBase;
+}
+
+-(void)setHeight : (int)newHeight
+{
+    height = newHeight;
+}
+
+
+
 -(int)GetNumSides
 {
     NSLog(@"Number of sides is %i", numSides );
@@ -42,4 +48,10 @@
     NSLog(@"This is a %@", name );
     return name;
 }
+
+-(int)GetArea
+{
+      NSLog(@"The Area of the %@ is %i", name, area);
+    return area;
+};
 @end

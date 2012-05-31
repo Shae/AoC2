@@ -16,21 +16,23 @@
         self = [super init];
         if (self != nil)
             {
-                numSides = 0;
+                shapeType = 3; 
                 name = @"None";
+                numSides = 0;
                 base = 0;
                 height = 0;
+                area = (base * height);
             }
         return self;
     };
 
-
+/*
 -(id)setAttr:(EShapeType)type shapeName:(NSString *)shapeName
 {
     if (self != nil )
     {
-        shapeType = type;
-        name = shapeName;
+        shapeType = 0;
+        name = @"None";
         base = 0;
         height = 0;
         numSides = 0;
@@ -38,8 +40,17 @@
     return self;
 }
 
+*/
 
+-(void)setBase :(int)newBase 
+{
+    base = newBase;
+}
 
+-(void)setHeight : (int)newHeight
+{
+    height = newHeight;
+}
 
 
 
@@ -57,6 +68,10 @@
     return name;
 }
 
--(int)GetArea{return 0;};
+-(int)GetArea
+{
+    NSLog(@"The Area of the %@ is %i", name, area);
+    return area;
+};
 
 @end
