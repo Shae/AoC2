@@ -34,23 +34,32 @@
             
         }
     */
+    self.view.backgroundColor = [UIColor blackColor];
     
     textlabel1 = [[UILabel alloc] initWithFrame:CGRectMake(0, 25, 320, 100)];
     textlabel1.backgroundColor = [UIColor yellowColor]; 
     textlabel1.text = @"TEST1";
+    textlabel1.textAlignment = UITextAlignmentCenter; 
     [self.view addSubview:textlabel1];
-    
+
     textlabel2 = [[UILabel alloc] initWithFrame:CGRectMake(0, 150, 320, 100)];
     textlabel2.backgroundColor = [UIColor orangeColor]; 
     textlabel2.text = @"TEST2";
+    textlabel2.textAlignment = UITextAlignmentCenter; 
     [self.view addSubview:textlabel2];
     
     textlabel3 = [[UILabel alloc] initWithFrame:CGRectMake(0, 275, 320, 100)];
     textlabel3.backgroundColor = [UIColor redColor]; 
     textlabel3.text = @"TEST3";
+    textlabel3.textAlignment = UITextAlignmentCenter; 
     [self.view addSubview:textlabel3];
     
-    
+    textlabel4 = [[UILabel alloc] initWithFrame:CGRectMake(0, 400, 320, 20)];
+    textlabel4.backgroundColor = [UIColor clearColor]; 
+    textlabel4.textColor = [UIColor whiteColor];
+    textlabel4.textAlignment = UITextAlignmentCenter; 
+    textlabel4.text = @"Shae B. R. Klusman (AoC2  Class1206)";
+    [self.view addSubview:textlabel4];
     
     
    
@@ -60,13 +69,27 @@
         [theShape setBase:20];
         [theShape setHeight:25];
         [theShape GetNumSides];
-        [theShape GetName];
-        [theShape GetArea];
-        textlabel1.text = @"Shape %@ Area: %i",[theShape GetName], [theShape GetArea];
-        
+        textlabel1.text = [NSString stringWithFormat:@"Shape %@ Area: %i",[theShape GetName], [theShape GetArea]];
     }  
     
-
+    ShapeFactory *factoryItem2 = [[ShapeFactory alloc] init];
+    if (factoryItem2 != nil) {
+        TriangleClass *theShape2 = (TriangleClass*)[factoryItem2 CreateShape:1];
+        [theShape2 setBase:20];
+        [theShape2 setHeight:20];
+        [theShape2 GetNumSides];  
+        textlabel2.text = [NSString stringWithFormat:@"Shape %@ Area: %i",[theShape2 GetName], [theShape2 GetArea]];
+    } 
+    
+    ShapeFactory *factoryItem3 = [[ShapeFactory alloc] init];
+    if (factoryItem3 != nil) {
+        TriangleClass *theShape3 = (TriangleClass*)[factoryItem3 CreateShape:2];
+        [theShape3 setBase:20];
+        [theShape3 setHeight:25];
+        [theShape3 GetNumSides];
+        textlabel3.text = [NSString stringWithFormat:@"Shape %@ Area: %i",[theShape3 GetName], [theShape3 GetArea]];
+    } 
+    
     
     
     [super viewDidLoad];

@@ -21,6 +21,7 @@
     UILabel *textlabel1;
     UILabel *textlabel2;
     UILabel *textlabel3;
+    UILabel *textlabel4;
 }
 
 

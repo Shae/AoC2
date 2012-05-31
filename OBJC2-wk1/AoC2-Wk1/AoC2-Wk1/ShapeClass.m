@@ -21,7 +21,7 @@
                 numSides = 0;
                 base = 0;
                 height = 0;
-                area = (base * height);
+                area = 0;
             }
         return self;
     };
@@ -70,6 +70,8 @@
 
 -(int)GetArea
 {
+   
+    area = (base * height); 
     NSLog(@"The Area of the %@ is %i", name, area);
     return area;
 };

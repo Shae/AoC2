@@ -51,7 +51,9 @@
 
 -(int)GetArea
 {
-      NSLog(@"The Area of the %@ is %i", name, area);
+    
+    area = (int) (0.5f * (base * height)); 
+    NSLog(@"The Area of the %@ is %i", name, area);
     return area;
 };
 
