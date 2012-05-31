@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "ShapeClass.h"
+#import "TriangleClass.h"
+#import "SquareClass.h"
+#import "RectangleClass.h"
 
 
 @interface ShapeFactory : NSObject
