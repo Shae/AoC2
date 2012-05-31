@@ -52,6 +52,8 @@
     
     
     
+    
+   
     ShapeFactory *factoryItem = [[ShapeFactory alloc] init];
     if (factoryItem != nil) {
         TriangleClass *theShape = (TriangleClass*)[factoryItem CreateShape:0];
@@ -59,7 +61,7 @@
         [theShape GetName];
         [theShape GetArea];
         
-    }
+    }  
     
     
     

@@ -25,14 +25,14 @@
     };
 
 
--(id)setAttr:(EShapeType)type shapeName:(NSString *)shapeName howLong:(int)howLong howHigh:(int)howHigh
+-(id)setAttr:(EShapeType)type shapeName:(NSString *)shapeName
 {
     if (self != nil )
     {
         shapeType = type;
         name = shapeName;
-        base = howLong;
-        height = howHigh;
+        base = 0;
+        height = 0;
         numSides = 0;
     }
     return self;

@@ -10,4 +10,7 @@
 
 @interface RectangleClass : ShapeClass
 -(int)GetArea;
+-(int)GetNumSides;
+-(NSString*)GetName;
+
 @end

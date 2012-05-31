@@ -14,7 +14,9 @@
 {
     if (self = [super init]) 
     {    
-        [self setAttr:SHAPETYPE_RECTANGLE shapeName:@"Rectangle" howLong:20 howHigh:10];
+        [self setAttr:SHAPETYPE_RECTANGLE shapeName:@"Rectangle"];
+        base = 20;
+        height = 15;
         numSides = 4;
     }
     return self;
@@ -26,5 +28,19 @@
     NSLog(@"The Area of the Rectangle is %i", area);
     return area;
     
+}
+
+
+-(int)GetNumSides
+{
+    NSLog(@"Number of sides is %i", numSides );
+    return numSides;
+}
+
+
+-(NSString*)GetName
+{
+    NSLog(@"This is a %@", name );
+    return name;
 }
 @end

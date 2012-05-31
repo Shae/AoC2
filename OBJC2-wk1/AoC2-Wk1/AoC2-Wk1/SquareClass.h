@@ -10,4 +10,6 @@
 
 @interface SquareClass : ShapeClass
 -(int)GetArea;
+-(int)GetNumSides;
+-(NSString*)GetName;
 @end

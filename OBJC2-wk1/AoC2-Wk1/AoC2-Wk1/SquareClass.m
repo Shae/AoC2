@@ -14,7 +14,9 @@
 {
     if (self = [super init]) 
     {    
-        [self setAttr:SHAPETYPE_SQUARE shapeName:@"Square" howLong:15 howHigh:15];
+        [self setAttr:SHAPETYPE_SQUARE shapeName:@"Square"];
+        base = 10;
+        height = 10;
         numSides = 4;
     }
     return self;
@@ -27,5 +29,17 @@
         return area;
         
     }
+-(int)GetNumSides
+{
+    NSLog(@"Number of sides is %i", numSides );
+    return numSides;
+}
 
+
+
+-(NSString*)GetName
+{
+    NSLog(@"This is a %@", name );
+    return name;
+}
 @end

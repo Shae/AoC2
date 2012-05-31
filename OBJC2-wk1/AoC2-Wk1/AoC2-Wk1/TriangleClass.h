@@ -10,4 +10,7 @@
 
 @interface TriangleClass : ShapeClass
 -(int)GetArea;
+-(NSString*)GetName;
+-(int)GetNumSides;
+
 @end
