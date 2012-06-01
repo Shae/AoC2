@@ -22,6 +22,7 @@
     }
     return self;
 }
+/*
 -(void)setBase :(int)newBase 
 {
     base = newBase;
@@ -30,7 +31,7 @@
 -(void)setHeight : (int)newHeight
 {
     height = newHeight;
-    area = (int) (0.5f * (base * height));
+   // area = (int) (0.5f * (base * height));
 }
 
 
@@ -48,7 +49,7 @@
     NSLog(@"This is a %@", name );
     return name;
 }
-
+*/
 -(int)GetArea
 {
     area = (int) (0.5f * (base * height)); 

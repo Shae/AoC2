@@ -9,9 +9,9 @@
 #import "ShapeClass.h"
 
 @interface SquareClass : ShapeClass
--(int)GetNumSides;
--(NSString*)GetName;
--(int)GetArea;
--(void)setBase :(int)newBase;
--(void)setHeight : (int)newHeight;
+//-(int)GetNumSides;
+//-(NSString*)GetName;
+//-(int)GetArea;
+//-(void)setBase :(int)newBase;
+//-(void)setHeight : (int)newHeight;
 @end

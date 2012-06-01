@@ -22,7 +22,7 @@
     }
     return self;
 }   
-
+/*
 -(void)setBase :(int)newBase 
 {
     base = newBase;
@@ -56,4 +56,5 @@
     NSLog(@"The Area of the %@ is %i", name, area);
     return area;
 };
+ */
 @end

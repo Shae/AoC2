@@ -9,9 +9,9 @@
 #import "ShapeClass.h"
 
 @interface TriangleClass : ShapeClass
--(int)GetNumSides;
--(NSString*)GetName;
+//-(int)GetNumSides;
+//-(NSString*)GetName;
 -(int)GetArea;
--(void)setBase :(int)newBase;
--(void)setHeight : (int)newHeight;
+//-(void)setBase :(int)newBase;
+//-(void)setHeight : (int)newHeight;
 @end
