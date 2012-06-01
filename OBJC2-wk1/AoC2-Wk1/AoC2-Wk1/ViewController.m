@@ -36,7 +36,7 @@
     */
     self.view.backgroundColor = [UIColor blackColor];
     
-    
+///////LABELS/////////////    
     textlabel1 = [[UILabel alloc] initWithFrame:CGRectMake(0, 25, 320, 100)];
     textlabel1.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"TriBG.jpg"]];
     //textlabel1.backgroundColor = [UIColor yellowColor]; 
@@ -66,39 +66,50 @@
     [self.view addSubview:textlabel4];
     
     
-   /*
-    ShapeFactory *factoryItem = [[ShapeFactory alloc] init];
-    if (factoryItem != nil) {
-        TriangleClass *theShape = (TriangleClass*)[factoryItem CreateShape:0];
-        [theShape setBase:20];
-        [theShape setHeight:25];
-        [theShape GetNumSides];
-        textlabel1.text = [NSString stringWithFormat:@"Shape: %@    Area: %i",[theShape GetName], [theShape GetArea]];
-    }  */
+//////////// FACTORY CALLS (Static) /////////////////
     
+    // for the static version of the shape factory
     TriangleClass *theTri = (TriangleClass*) [ShapeFactory CreateShape:0];
     [theTri setBase:20];
     [theTri setHeight:25];
     [theTri GetNumSides];
     textlabel1.text = [NSString stringWithFormat:@"Shape: %@    Area: %i",[theTri GetName], [theTri GetArea]];
-    
-    /*
-    ShapeFactory *factoryItem2 = [[ShapeFactory alloc] init];
-    if (factoryItem2 != nil) {
-        TriangleClass *theShape2 = (TriangleClass*)[factoryItem2 CreateShape:1];
-        [theShape2 setBase:20];
-        [theShape2 setHeight:20];
-        [theShape2 GetNumSides];  
-        textlabel2.text = [NSString stringWithFormat:@"Shape: %@    Area: %i",[theShape2 GetName], [theShape2 GetArea]];
-    } 
-    */
+
+    // for the static version of the shape factory
     SquareClass *theSqr = (SquareClass*) [ShapeFactory CreateShape:1];
     [theSqr setBase:20];
     [theSqr setHeight:20];
     [theSqr GetNumSides];
     textlabel2.text = [NSString stringWithFormat:@"Shape: %@    Area: %i",[theSqr GetName], [theSqr GetArea]];
     
-    /*
+    // for the static version of the shape factory
+    RectangleClass *theRect = (RectangleClass*) [ShapeFactory CreateShape:2];
+    [theRect setBase:15];
+    [theRect setHeight:25];
+    [theRect GetNumSides];
+    textlabel3.text = [NSString stringWithFormat:@"Shape: %@    Area: %i",[theRect GetName], [theRect GetArea]];
+
+//////////// FACTORY CALLS (instance) /////////////////
+    
+    /*   
+     ShapeFactory *factoryItem = [[ShapeFactory alloc] init];
+     if (factoryItem != nil) {
+     TriangleClass *theShape = (TriangleClass*)[factoryItem CreateShape:0];
+     [theShape setBase:20];
+     [theShape setHeight:25];
+     [theShape GetNumSides];
+     textlabel1.text = [NSString stringWithFormat:@"Shape: %@    Area: %i",[theShape GetName], [theShape GetArea]];
+     }  
+ 
+     ShapeFactory *factoryItem2 = [[ShapeFactory alloc] init];
+     if (factoryItem2 != nil) {
+     TriangleClass *theShape2 = (TriangleClass*)[factoryItem2 CreateShape:1];
+     [theShape2 setBase:20];
+     [theShape2 setHeight:20];
+     [theShape2 GetNumSides];  
+     textlabel2.text = [NSString stringWithFormat:@"Shape: %@    Area: %i",[theShape2 GetName], [theShape2 GetArea]];
+     } 
+     
     ShapeFactory *factoryItem3 = [[ShapeFactory alloc] init];
     if (factoryItem3 != nil) {
         TriangleClass *theShape3 = (TriangleClass*)[factoryItem3 CreateShape:2];
@@ -109,11 +120,8 @@
     } 
     */
     
-    RectangleClass *theRect = (RectangleClass*) [ShapeFactory CreateShape:2];
-    [theRect setBase:15];
-    [theRect setHeight:25];
-    [theRect GetNumSides];
-    textlabel3.text = [NSString stringWithFormat:@"Shape: %@    Area: %i",[theRect GetName], [theRect GetArea]];
+///////////////////    
+
     
     
     [super viewDidLoad];
