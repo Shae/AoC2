@@ -51,19 +51,10 @@
 
 -(int)GetArea
 {
-    
     area = (int) (0.5f * (base * height)); 
     NSLog(@"The Area of the %@ is %i", name, area);
     return area;
 };
 
-/*
--(int)GetArea
-{
-    int area = (int) (0.5f * (base * height));
-    NSLog(@"The Area of the Triangle is %i", area);
-    return area;
-    
-}
- */
+
 @end

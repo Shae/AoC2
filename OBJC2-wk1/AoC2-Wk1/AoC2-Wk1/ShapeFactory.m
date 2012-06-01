@@ -14,15 +14,24 @@
 
 @implementation ShapeFactory
 
--(ShapeClass*)CreateShape : (NSInteger)shapeCode
+
++(ShapeClass*)CreateShape : (NSInteger)shapeCode
 {
+    
    if(shapeCode == 0){
+       
         return [[TriangleClass alloc]init]; 
+       
     }else if(shapeCode == 1){
+        
         return [[SquareClass alloc]init];
+        
     }else if(shapeCode == 2){
+        
         return [[RectangleClass alloc]init];
+        
     }
+    
     return nil;
 };
 

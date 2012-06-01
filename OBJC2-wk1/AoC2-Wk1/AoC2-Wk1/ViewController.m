@@ -66,7 +66,7 @@
     [self.view addSubview:textlabel4];
     
     
-   
+   /*
     ShapeFactory *factoryItem = [[ShapeFactory alloc] init];
     if (factoryItem != nil) {
         TriangleClass *theShape = (TriangleClass*)[factoryItem CreateShape:0];
@@ -74,8 +74,15 @@
         [theShape setHeight:25];
         [theShape GetNumSides];
         textlabel1.text = [NSString stringWithFormat:@"Shape: %@    Area: %i",[theShape GetName], [theShape GetArea]];
-    }  
+    }  */
     
+    TriangleClass *theTri = (TriangleClass*) [ShapeFactory CreateShape:0];
+    [theTri setBase:20];
+    [theTri setHeight:25];
+    [theTri GetNumSides];
+    textlabel1.text = [NSString stringWithFormat:@"Shape: %@    Area: %i",[theTri GetName], [theTri GetArea]];
+    
+    /*
     ShapeFactory *factoryItem2 = [[ShapeFactory alloc] init];
     if (factoryItem2 != nil) {
         TriangleClass *theShape2 = (TriangleClass*)[factoryItem2 CreateShape:1];
@@ -84,7 +91,14 @@
         [theShape2 GetNumSides];  
         textlabel2.text = [NSString stringWithFormat:@"Shape: %@    Area: %i",[theShape2 GetName], [theShape2 GetArea]];
     } 
+    */
+    SquareClass *theSqr = (SquareClass*) [ShapeFactory CreateShape:1];
+    [theSqr setBase:20];
+    [theSqr setHeight:20];
+    [theSqr GetNumSides];
+    textlabel2.text = [NSString stringWithFormat:@"Shape: %@    Area: %i",[theSqr GetName], [theSqr GetArea]];
     
+    /*
     ShapeFactory *factoryItem3 = [[ShapeFactory alloc] init];
     if (factoryItem3 != nil) {
         TriangleClass *theShape3 = (TriangleClass*)[factoryItem3 CreateShape:2];
@@ -93,7 +107,13 @@
         [theShape3 GetNumSides];
         textlabel3.text = [NSString stringWithFormat:@"Shape: %@    Area: %i",[theShape3 GetName], [theShape3 GetArea]];
     } 
+    */
     
+    RectangleClass *theRect = (RectangleClass*) [ShapeFactory CreateShape:2];
+    [theRect setBase:15];
+    [theRect setHeight:25];
+    [theRect GetNumSides];
+    textlabel3.text = [NSString stringWithFormat:@"Shape: %@    Area: %i",[theRect GetName], [theRect GetArea]];
     
     
     [super viewDidLoad];
