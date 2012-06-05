@@ -10,6 +10,7 @@
 
 @interface MainViewController : UIViewController <FlipsideViewControllerDelegate>{
     NSString *x;
+    NSNumber *y;
 }
 @property (weak, nonatomic) IBOutlet UITextField *mainText;
 - (IBAction)Toggle:(UISwitch *)sender;
@@ -28,6 +29,7 @@
 - (IBAction)Equals:(UIButton *)sender;
 
 - (IBAction)Clear:(UIButton *)sender;
+
 
 
 

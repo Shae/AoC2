@@ -59,6 +59,7 @@
         x = [x stringByAppendingString: @"0"];
         NSLog(@"%@", x);
     }
+    mainText.text = x;
 }
 
 - (IBAction)One:(UIButton *)sender {
@@ -69,6 +70,7 @@
         x = [x stringByAppendingString: @"1"];
         NSLog(@"%@", x);
     }
+     mainText.text = x;
 }
 
 - (IBAction)Two:(UIButton *)sender {
@@ -79,6 +81,7 @@
         x = [x stringByAppendingString: @"2"];
         NSLog(@"%@", x);
     }
+     mainText.text = x;
 }
 
 - (IBAction)Three:(UIButton *)sender {
@@ -89,6 +92,7 @@
         x = [x stringByAppendingString: @"3"];
         NSLog(@"%@", x);
     }
+     mainText.text = x;
 }
 
 - (IBAction)Four:(UIButton *)sender {
@@ -99,6 +103,7 @@
         x = [x stringByAppendingString: @"4"];
         NSLog(@"%@", x);
     }
+     mainText.text = x;
 }
 
 - (IBAction)Five:(UIButton *)sender {
@@ -109,6 +114,7 @@
         x = [x stringByAppendingString: @"5"];
         NSLog(@"%@", x);
     }
+     mainText.text = x;
 }
 
 - (IBAction)Six:(UIButton *)sender {
@@ -119,6 +125,7 @@
         x = [x stringByAppendingString: @"6"];
         NSLog(@"%@", x);
     }
+     mainText.text = x;
 }
 
 - (IBAction)Seven:(UIButton *)sender {
@@ -129,6 +136,7 @@
         x = [x stringByAppendingString: @"7"];
         NSLog(@"%@", x);
     }
+     mainText.text = x;
 }
 
 - (IBAction)Eight:(UIButton *)sender {
@@ -139,6 +147,7 @@
         x = [x stringByAppendingString: @"8"];
         NSLog(@"%@", x);
     }
+     mainText.text = x;
 }
 
 - (IBAction)Nine:(UIButton *)sender {
@@ -149,6 +158,7 @@
         x = [x stringByAppendingString: @"9"];
         NSLog(@"%@", x);
     }
+     mainText.text = x;
 }
 
 - (IBAction)Plus:(UIButton *)sender {
@@ -159,11 +169,21 @@
         x = [x stringByAppendingString: @"+"];
         NSLog(@"%@", x);
     }
+     mainText.text = x;
 }
 
 - (IBAction)Equals:(UIButton *)sender {
-    
-}
+    if (x != nil) {
+        NSNumber *result = [NSExpression expressionWithFormat:x];
+        NSLog(@"%@", result); 
+        y = result;
+    }
+    NSLog(@"%@", y);
+   }
+
+
+
+
 
 - (IBAction)Toggle:(UISwitch *)sender {
 }
