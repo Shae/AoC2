@@ -13,7 +13,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BFBC9B951579461900F4AE3C"
+               BlueprintIdentifier = "BF54A717157D5F4A005D2F71"
                BuildableName = "FSOcalc.app"
                BlueprintName = "FSOcalc"
                ReferencedContainer = "container:FSOcalc.xcodeproj">
@@ -31,7 +31,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "BFBC9B951579461900F4AE3C"
+            BlueprintIdentifier = "BF54A717157D5F4A005D2F71"
             BuildableName = "FSOcalc.app"
             BlueprintName = "FSOcalc"
             ReferencedContainer = "container:FSOcalc.xcodeproj">
@@ -50,7 +50,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "BFBC9B951579461900F4AE3C"
+            BlueprintIdentifier = "BF54A717157D5F4A005D2F71"
             BuildableName = "FSOcalc.app"
             BlueprintName = "FSOcalc"
             ReferencedContainer = "container:FSOcalc.xcodeproj">
@@ -68,7 +68,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "BFBC9B951579461900F4AE3C"
+            BlueprintIdentifier = "BF54A717157D5F4A005D2F71"
             BuildableName = "FSOcalc.app"
             BlueprintName = "FSOcalc"
             ReferencedContainer = "container:FSOcalc.xcodeproj">
