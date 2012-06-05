@@ -177,8 +177,17 @@
         NSNumber *result = [NSExpression expressionWithFormat:x];
         NSLog(@"%@", result); 
         y = result;
+        //  int z = (int)y;
+        //  NSLog(@"%@", z);
     }
-    NSLog(@"%@", y);
+    
+    
+    
+    
+    
+    
+   // NSLog(@"%@", y);
+     
    }
 
 
@@ -192,6 +201,9 @@
 
 
 - (IBAction)Clear:(UIButton *)sender {
+        mainText.text = @"";
+        x = @"";
+    
 }
 
 @end
