@@ -17,8 +17,16 @@
 
 
 
+
 - (void)viewDidLoad
 {
+    ///// DEFAULT VALUES /////
+    screenNum = 0;
+    holdNum = 0;
+    answer = 0;
+    
+    
+    
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
@@ -52,143 +60,155 @@
 }
 
 - (IBAction)Zero:(UIButton *)sender {
-    if( x == nil){
-        x = @"0";
-        NSLog(@"%@", x);
+    if( screenString == nil){
+        screenString = @"0";
+        NSLog(@"%@", screenString);
     }else{
-        x = [x stringByAppendingString: @"0"];
-        NSLog(@"%@", x);
+        screenString = [screenString stringByAppendingString: @"0"];
+        NSLog(@"%@", screenString);
     }
-    mainText.text = x;
+    mainText.text = screenString;
 }
 
 - (IBAction)One:(UIButton *)sender {
-    if( x == nil){
-        x = @"1";
-        NSLog(@"%@", x);
+    if( screenString == nil){
+        screenString = @"1";
+        NSLog(@"%@", screenString);
     }else{
-        x = [x stringByAppendingString: @"1"];
-        NSLog(@"%@", x);
+        screenString = [screenString stringByAppendingString: @"1"];
+        NSLog(@"%@", screenString);
     }
-     mainText.text = x;
+    mainText.text = screenString;
 }
 
 - (IBAction)Two:(UIButton *)sender {
-    if( x == nil){
-        x = @"2";
-        NSLog(@"%@", x);
+    if( screenString == nil){
+        screenString = @"2";
+        NSLog(@"%@", screenString);
     }else{
-        x = [x stringByAppendingString: @"2"];
-        NSLog(@"%@", x);
+        screenString = [screenString stringByAppendingString: @"2"];
+        NSLog(@"%@", screenString);
     }
-     mainText.text = x;
+     mainText.text = screenString;
 }
 
 - (IBAction)Three:(UIButton *)sender {
-    if( x == nil){
-        x = @"3";
-        NSLog(@"%@", x);
+    if( screenString == nil){
+        screenString = @"3";
+        NSLog(@"%@", screenString);
     }else{
-        x = [x stringByAppendingString: @"3"];
-        NSLog(@"%@", x);
+        screenString = [screenString stringByAppendingString: @"3"];
+        NSLog(@"%@", screenString);
     }
-     mainText.text = x;
+    mainText.text = screenString;
 }
 
 - (IBAction)Four:(UIButton *)sender {
-    if( x == nil){
-        x = @"4";
-        NSLog(@"%@", x);
+    if( screenString == nil){
+        screenString = @"4";
+        NSLog(@"%@", screenString);
     }else{
-        x = [x stringByAppendingString: @"4"];
-        NSLog(@"%@", x);
+        screenString = [screenString stringByAppendingString: @"4"];
+        NSLog(@"%@", screenString);
     }
-     mainText.text = x;
+    mainText.text = screenString;
 }
 
 - (IBAction)Five:(UIButton *)sender {
-    if( x == nil){
-        x = @"5";
-        NSLog(@"%@", x);
+    if( screenString == nil){
+        screenString = @"5";
+        NSLog(@"%@", screenString);
     }else{
-        x = [x stringByAppendingString: @"5"];
-        NSLog(@"%@", x);
+        screenString = [screenString stringByAppendingString: @"5"];
+        NSLog(@"%@", screenString);
     }
-     mainText.text = x;
+    mainText.text = screenString;
 }
 
 - (IBAction)Six:(UIButton *)sender {
-    if( x == nil){
-        x = @"6";
-        NSLog(@"%@", x);
+    if( screenString == nil){
+        screenString = @"6";
+        NSLog(@"%@", screenString);
     }else{
-        x = [x stringByAppendingString: @"6"];
-        NSLog(@"%@", x);
+        screenString = [screenString stringByAppendingString: @"6"];
+        NSLog(@"%@", screenString);
     }
-     mainText.text = x;
+    mainText.text = screenString;
 }
 
 - (IBAction)Seven:(UIButton *)sender {
-    if( x == nil){
-        x = @"7";
-        NSLog(@"%@", x);
+    if( screenString == nil){
+        screenString = @"7";
+        NSLog(@"%@", screenString);
     }else{
-        x = [x stringByAppendingString: @"7"];
-        NSLog(@"%@", x);
+        screenString = [screenString stringByAppendingString: @"7"];
+        NSLog(@"%@", screenString);
     }
-     mainText.text = x;
+    mainText.text = screenString;
 }
 
 - (IBAction)Eight:(UIButton *)sender {
-    if( x == nil){
-        x = @"8";
-        NSLog(@"%@", x);
+    if( screenString == nil){
+        screenString = @"8";
+        NSLog(@"%@", screenString);
     }else{
-        x = [x stringByAppendingString: @"8"];
-        NSLog(@"%@", x);
+        screenString = [screenString stringByAppendingString: @"8"];
+        NSLog(@"%@", screenString);
     }
-     mainText.text = x;
+    mainText.text = screenString;
 }
 
 - (IBAction)Nine:(UIButton *)sender {
-    if( x == nil){
-        x = @"9";
-        NSLog(@"%@", x);
+    if( screenString == nil){
+        screenString = @"9";
+        NSLog(@"%@", screenString);
     }else{
-        x = [x stringByAppendingString: @"9"];
-        NSLog(@"%@", x);
+        screenString = [screenString stringByAppendingString: @"9"];
+        NSLog(@"%@", screenString);
     }
-     mainText.text = x;
+    mainText.text = screenString;
+}
+
+- (IBAction)Point:(UIButton *)sender {
+    if( screenString == nil){
+        screenString = @".";
+        NSLog(@"%@", screenString);
+    }else{
+        screenString = [screenString stringByAppendingString: @"."];
+        NSLog(@"%@", screenString);
+    }
+    mainText.text = screenString;
 }
 
 - (IBAction)Plus:(UIButton *)sender {
-    if( x == nil){
-        x = @"+";
-        NSLog(@"%@", x);
-    }else{
-        x = [x stringByAppendingString: @"+"];
-        NSLog(@"%@", x);
+    if (screenString == @""){
+        mainText.text = @"";
+        screenString = @"";
+    }else if((screenString != @"") && (holdNum == 0)){
+        holdNum = [screenString floatValue];
+        mainText.text = @"";
+        screenString = @"";
+    }else if ((screenString != @"") && (holdNum != 0 )) {
+        holdNum = holdNum + [screenString floatValue];
+        mainText.text = @"";
+        screenString = @"";
     }
-     mainText.text = x;
+
 }
 
 - (IBAction)Equals:(UIButton *)sender {
-    if (x != nil) {
-        NSNumber *result = [NSExpression expressionWithFormat:x];
-        NSLog(@"%@", result); 
-        y = result;
-        //  int z = (int)y;
-        //  NSLog(@"%@", z);
+    if ((screenString != @"") && (holdNum != 0)){
+        answer = holdNum + [screenString floatValue];
+        NSLog(@"%f", answer);
+       
+        mainText.text = [NSString stringWithFormat: @"%f",answer];
+      
     }
+}
     
-    
-    
-    
-    
-    
-   // NSLog(@"%@", y);
-     
-   }
+
+
+
 
 
 
@@ -202,7 +222,8 @@
 
 - (IBAction)Clear:(UIButton *)sender {
         mainText.text = @"";
-        x = @"";
+        screenString = @"";
+    holdNum = 0;
     
 }
 

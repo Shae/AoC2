@@ -11,5 +11,6 @@
 @interface MainViewController : UIViewController <FlipsideViewControllerDelegate>
 
 - (IBAction)showInfo:(id)sender;
+- (IBAction)numKey:(UIButton *)sender;
 
 @end

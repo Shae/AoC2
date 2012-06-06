@@ -9,8 +9,10 @@
 #import "FlipsideViewController.h"
 
 @interface MainViewController : UIViewController <FlipsideViewControllerDelegate>{
-    NSString *x;
-    NSNumber *y;
+    NSString *screenString;
+    float screenNum;
+    float holdNum;
+    float answer;
 }
 @property (weak, nonatomic) IBOutlet UITextField *mainText;
 - (IBAction)Toggle:(UISwitch *)sender;
@@ -27,6 +29,7 @@
 - (IBAction)Nine:(UIButton *)sender;
 - (IBAction)Plus:(UIButton *)sender;
 - (IBAction)Equals:(UIButton *)sender;
+- (IBAction)Point:(UIButton *)sender;
 
 - (IBAction)Clear:(UIButton *)sender;
 
