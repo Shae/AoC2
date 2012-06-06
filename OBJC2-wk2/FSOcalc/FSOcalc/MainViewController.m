@@ -14,7 +14,20 @@
 
 @implementation MainViewController
 @synthesize mainText;
-//@synthesize mySwitch;
+@synthesize One1;
+@synthesize Zero0;
+@synthesize Two2;
+@synthesize Three3;
+@synthesize Four4;
+@synthesize Five5;
+@synthesize Six6;
+@synthesize Seven7;
+@synthesize Eight8;
+@synthesize Nine9;
+@synthesize _Point;
+@synthesize _Equals;
+@synthesize _Plus;
+
 
 
 
@@ -40,6 +53,19 @@
     [self setMainText:nil];
 
     mySwitch = nil;
+    [self setOne1:nil];
+    [self setZero0:nil];
+    [self setTwo2:nil];
+    [self setThree3:nil];
+    [self setFour4:nil];
+    [self setFive5:nil];
+    [self setSix6:nil];
+    [self setSeven7:nil];
+    [self setEight8:nil];
+    [self setNine9:nil];
+    [self set_Point:nil];
+    [self set_Equals:nil];
+    [self set_Plus:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -173,7 +199,7 @@
     }
     mainText.text = screenString;
 }
-
+/*
 - (IBAction)Point:(UIButton *)sender {
     if( screenString == nil){
         screenString = @"0.";
@@ -184,7 +210,7 @@
     }
     mainText.text = screenString;
 }
-
+*/
 - (IBAction)Plus:(UIButton *)sender {
     if (screenString == @""){
         mainText.text = @"";
@@ -215,9 +241,42 @@
 
 -(void)switchIT{
     if (mySwitch.on) {
+        screenString = @"";
+        mainText.text = @"";
         NSLog(@"Switch is on");
+        One1.enabled = YES;
+        Two2.enabled = YES;
+        Three3.enabled = YES;
+        Four4.enabled = YES;
+        Five5.enabled = YES;
+        Six6.enabled = YES;
+        Seven7.enabled = YES;
+        Eight8.enabled = YES;
+        Nine9.enabled = YES;
+        _Plus.enabled = YES;
+  //      _Point.enabled = YES;
+        _Equals.enabled = YES;
+
+        
     }else{
+        screenString = @"";
+        mainText.text = @"";
+        
         NSLog(@"Switch is off");
+        One1.enabled = NO;
+        One1.enabled = NO;
+        Two2.enabled = NO;
+        Three3.enabled = NO;
+        Four4.enabled = NO;
+        Five5.enabled = NO;
+        Six6.enabled = NO;
+        Seven7.enabled = NO;
+        Eight8.enabled = NO;
+        Nine9.enabled = NO;
+        Zero0.enabled = NO;
+        _Plus.enabled = NO;
+ //       _Point.enabled = NO;
+        _Equals.enabled = NO;
     }
 }
 
