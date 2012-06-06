@@ -17,6 +17,10 @@
 		BF54A769157EC2D1005D2F71 /* FlipsideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF54A768157EC2D1005D2F71 /* FlipsideViewController.m */; };
 		BF54A76C157EC2D1005D2F71 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF54A76A157EC2D1005D2F71 /* MainViewController.xib */; };
 		BF54A76F157EC2D1005D2F71 /* FlipsideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF54A76D157EC2D1005D2F71 /* FlipsideViewController.xib */; };
+		BF54A78C157FED9A005D2F71 /* screen.png in Resources */ = {isa = PBXBuildFile; fileRef = BF54A78B157FED9A005D2F71 /* screen.png */; };
+		BF54A78E157FF7F0005D2F71 /* zebra.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BF54A78D157FF7F0005D2F71 /* zebra.jpg */; };
+		BF54A790157FF7F6005D2F71 /* cheetah.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BF54A78F157FF7F6005D2F71 /* cheetah.jpg */; };
+		BF54A792157FF7FC005D2F71 /* gator.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BF54A791157FF7FC005D2F71 /* gator.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +40,10 @@
 		BF54A768157EC2D1005D2F71 /* FlipsideViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlipsideViewController.m; sourceTree = "<group>"; };
 		BF54A76B157EC2D1005D2F71 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainViewController.xib; sourceTree = "<group>"; };
 		BF54A76E157EC2D1005D2F71 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FlipsideViewController.xib; sourceTree = "<group>"; };
+		BF54A78B157FED9A005D2F71 /* screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screen.png; sourceTree = "<group>"; };
+		BF54A78D157FF7F0005D2F71 /* zebra.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = zebra.jpg; sourceTree = "<group>"; };
+		BF54A78F157FF7F6005D2F71 /* cheetah.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cheetah.jpg; sourceTree = "<group>"; };
+		BF54A791157FF7FC005D2F71 /* gator.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = gator.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +63,10 @@
 		BF54A743157EC2D0005D2F71 = {
 			isa = PBXGroup;
 			children = (
+				BF54A791157FF7FC005D2F71 /* gator.jpg */,
+				BF54A78F157FF7F6005D2F71 /* cheetah.jpg */,
+				BF54A78D157FF7F0005D2F71 /* zebra.jpg */,
+				BF54A78B157FED9A005D2F71 /* screen.png */,
 				BF54A758157EC2D1005D2F71 /* FSOcalc2 */,
 				BF54A751157EC2D1005D2F71 /* Frameworks */,
 				BF54A74F157EC2D1005D2F71 /* Products */,
@@ -159,6 +171,10 @@
 				BF54A75D157EC2D1005D2F71 /* InfoPlist.strings in Resources */,
 				BF54A76C157EC2D1005D2F71 /* MainViewController.xib in Resources */,
 				BF54A76F157EC2D1005D2F71 /* FlipsideViewController.xib in Resources */,
+				BF54A78C157FED9A005D2F71 /* screen.png in Resources */,
+				BF54A78E157FF7F0005D2F71 /* zebra.jpg in Resources */,
+				BF54A790157FF7F6005D2F71 /* cheetah.jpg in Resources */,
+				BF54A792157FF7FC005D2F71 /* gator.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

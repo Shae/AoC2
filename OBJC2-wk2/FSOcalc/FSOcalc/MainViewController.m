@@ -40,6 +40,7 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     ///// DEFAULT VALUES /////
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"zebra.jpg"]];
     screenNum = 0;
     holdNum = 0;
     answer = 0;
@@ -279,21 +280,22 @@
     
     if (BGswitch.selectedSegmentIndex == 0) {
         
-        self.view.backgroundColor = [UIColor whiteColor];
+         self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"zebra.jpg"]];
+        One1.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"zebra.jpg"]];
         NSLog(@"White BG Selected");
         
     }
     
     if (BGswitch.selectedSegmentIndex == 1) {
         
-        self.view.backgroundColor = [UIColor blueColor];
+        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"gator.jpg"]];
         NSLog(@"Blue BG Selected");
         
     }
     
     if (BGswitch.selectedSegmentIndex == 2) {
         
-        self.view.backgroundColor = [UIColor greenColor];
+        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"cheetah.jpg"]];
         NSLog(@"Green BG Selected");
         
     }
