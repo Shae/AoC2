@@ -13,9 +13,10 @@
 @end
 
 @implementation MainViewController
+
 @synthesize mainText;
-@synthesize One1;
 @synthesize Zero0;
+@synthesize One1;
 @synthesize Two2;
 @synthesize Three3;
 @synthesize Four4;
@@ -24,9 +25,9 @@
 @synthesize Seven7;
 @synthesize Eight8;
 @synthesize Nine9;
-@synthesize _Point;
 @synthesize _Equals;
 @synthesize _Plus;
+
 
 
 
@@ -51,8 +52,10 @@
 {
 
     [self setMainText:nil];
-
+    
+    BGswitch = nil;
     mySwitch = nil;
+    
     [self setOne1:nil];
     [self setZero0:nil];
     [self setTwo2:nil];
@@ -63,9 +66,10 @@
     [self setSeven7:nil];
     [self setEight8:nil];
     [self setNine9:nil];
-    [self set_Point:nil];
     [self set_Equals:nil];
     [self set_Plus:nil];
+
+
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -199,18 +203,8 @@
     }
     mainText.text = screenString;
 }
-/*
-- (IBAction)Point:(UIButton *)sender {
-    if( screenString == nil){
-        screenString = @"0.";
-        NSLog(@"%@", screenString);
-    }else if (screenString ) {
-        screenString = [screenString stringByAppendingString: @"."];
-        NSLog(@"%@", screenString);
-    }
-    mainText.text = screenString;
-}
-*/
+
+
 - (IBAction)Plus:(UIButton *)sender {
     if (screenString == @""){
         mainText.text = @"";
@@ -219,20 +213,21 @@
         holdNum = [screenString floatValue];
         mainText.text = @"";
         screenString = @"";
+        NSLog(@"+");
     }else if ((screenString != @"") && (holdNum != 0 )) {
-        holdNum = holdNum + [screenString floatValue];
+        holdNum = holdNum + [screenString intValue];
         mainText.text = @"";
         screenString = @"";
+        NSLog(@"+");
     }
-
 }
 
 - (IBAction)Equals:(UIButton *)sender {
     if ((screenString != @"") && (holdNum != 0)){
-        answer = holdNum + [screenString floatValue];
-        NSLog(@"%f", answer);
-       
-        mainText.text = [NSString stringWithFormat: @"%f",answer];
+        answer = holdNum + [screenString intValue];
+        NSLog(@"=");
+        NSLog(@"%i", answer);
+        mainText.text = [NSString stringWithFormat: @"%i",answer];
       
     }
 }
@@ -244,6 +239,7 @@
         screenString = @"";
         mainText.text = @"";
         NSLog(@"Switch is on");
+        
         One1.enabled = YES;
         Two2.enabled = YES;
         Three3.enabled = YES;
@@ -254,15 +250,14 @@
         Eight8.enabled = YES;
         Nine9.enabled = YES;
         _Plus.enabled = YES;
-  //      _Point.enabled = YES;
         _Equals.enabled = YES;
 
         
     }else{
         screenString = @"";
         mainText.text = @"";
-        
         NSLog(@"Switch is off");
+        
         One1.enabled = NO;
         One1.enabled = NO;
         Two2.enabled = NO;
@@ -275,15 +270,35 @@
         Nine9.enabled = NO;
         Zero0.enabled = NO;
         _Plus.enabled = NO;
- //       _Point.enabled = NO;
         _Equals.enabled = NO;
     }
 }
 
 
-
-
-
+-(IBAction)BGtoggle:(id)sender {
+    
+    if (BGswitch.selectedSegmentIndex == 0) {
+        
+        self.view.backgroundColor = [UIColor whiteColor];
+        NSLog(@"White BG Selected");
+        
+    }
+    
+    if (BGswitch.selectedSegmentIndex == 1) {
+        
+        self.view.backgroundColor = [UIColor blueColor];
+        NSLog(@"Blue BG Selected");
+        
+    }
+    
+    if (BGswitch.selectedSegmentIndex == 2) {
+        
+        self.view.backgroundColor = [UIColor greenColor];
+        NSLog(@"Green BG Selected");
+        
+    }
+    
+} 
 
 
 

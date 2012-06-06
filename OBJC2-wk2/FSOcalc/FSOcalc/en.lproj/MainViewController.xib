@@ -83,7 +83,7 @@
 						<string key="NSFrame">{{20, 20}, {280, 31}}</string>
 						<reference key="NSSuperview" ref="883825266"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="358456434"/>
+						<reference key="NSNextKeyView" ref="705192039"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -366,6 +366,7 @@
 						<string key="NSFrame">{{138, 316}, {44, 44}}</string>
 						<reference key="NSSuperview" ref="883825266"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="558454645"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -413,7 +414,7 @@
 						<string key="NSFrame">{{20, 323}, {104, 37}}</string>
 						<reference key="NSSuperview" ref="883825266"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="705192039"/>
+						<reference key="NSNextKeyView" ref="297120050"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -436,7 +437,7 @@
 						<string key="NSFrame">{{20, 71}, {162, 37}}</string>
 						<reference key="NSSuperview" ref="883825266"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="558454645"/>
+						<reference key="NSNextKeyView" ref="358456434"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -707,11 +708,11 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">_Point</string>
+						<string key="label">BGswitch</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="297120050"/>
+						<reference key="destination" ref="880111802"/>
 					</object>
-					<int key="connectionID">92</int>
+					<int key="connectionID">106</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
@@ -823,6 +824,15 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">BGtoggle:</string>
+						<reference key="source" ref="880111802"/>
+						<reference key="destination" ref="372490531"/>
+						<int key="IBEventType">13</int>
+					</object>
+					<int key="connectionID">109</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">Plus:</string>
 						<reference key="source" ref="68648081"/>
 						<reference key="destination" ref="372490531"/>
@@ -838,15 +848,6 @@
 						<int key="IBEventType">7</int>
 					</object>
 					<int key="connectionID">68</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">Point:</string>
-						<reference key="source" ref="297120050"/>
-						<reference key="destination" ref="372490531"/>
-						<int key="IBEventType">7</int>
-					</object>
-					<int key="connectionID">76</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -885,13 +886,13 @@
 							<reference ref="68648081"/>
 							<reference ref="934311868"/>
 							<reference ref="1064383165"/>
-							<reference ref="880111802"/>
 							<reference ref="558454645"/>
 							<reference ref="12657368"/>
 							<reference ref="515890037"/>
 							<reference ref="155013553"/>
 							<reference ref="705192039"/>
 							<reference ref="297120050"/>
+							<reference ref="880111802"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -1030,7 +1031,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">92</int>
+			<int key="maxID">109</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -1038,6 +1039,7 @@
 					<string key="className">MainViewController</string>
 					<string key="superclassName">UIViewController</string>
 					<dictionary class="NSMutableDictionary" key="actions">
+						<string key="BGtoggle:">id</string>
 						<string key="Clear:">UIButton</string>
 						<string key="Eight:">UIButton</string>
 						<string key="Equals:">UIButton</string>
@@ -1046,7 +1048,6 @@
 						<string key="Nine:">UIButton</string>
 						<string key="One:">UIButton</string>
 						<string key="Plus:">UIButton</string>
-						<string key="Point:">UIButton</string>
 						<string key="Seven:">UIButton</string>
 						<string key="Six:">UIButton</string>
 						<string key="Three:">UIButton</string>
@@ -1055,6 +1056,10 @@
 						<string key="showInfo:">id</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="actionInfosByName">
+						<object class="IBActionInfo" key="BGtoggle:">
+							<string key="name">BGtoggle:</string>
+							<string key="candidateClassName">id</string>
+						</object>
 						<object class="IBActionInfo" key="Clear:">
 							<string key="name">Clear:</string>
 							<string key="candidateClassName">UIButton</string>
@@ -1087,10 +1092,6 @@
 							<string key="name">Plus:</string>
 							<string key="candidateClassName">UIButton</string>
 						</object>
-						<object class="IBActionInfo" key="Point:">
-							<string key="name">Point:</string>
-							<string key="candidateClassName">UIButton</string>
-						</object>
 						<object class="IBActionInfo" key="Seven:">
 							<string key="name">Seven:</string>
 							<string key="candidateClassName">UIButton</string>
@@ -1117,6 +1118,7 @@
 						</object>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="outlets">
+						<string key="BGswitch">UISegmentedControl</string>
 						<string key="Eight8">UIButton</string>
 						<string key="Five5">UIButton</string>
 						<string key="Four4">UIButton</string>
@@ -1129,11 +1131,14 @@
 						<string key="Zero0">UIButton</string>
 						<string key="_Equals">UIButton</string>
 						<string key="_Plus">UIButton</string>
-						<string key="_Point">UIButton</string>
 						<string key="mainText">UITextField</string>
 						<string key="mySwitch">UISwitch</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<object class="IBToOneOutletInfo" key="BGswitch">
+							<string key="name">BGswitch</string>
+							<string key="candidateClassName">UISegmentedControl</string>
+						</object>
 						<object class="IBToOneOutletInfo" key="Eight8">
 							<string key="name">Eight8</string>
 							<string key="candidateClassName">UIButton</string>
@@ -1180,10 +1185,6 @@
 						</object>
 						<object class="IBToOneOutletInfo" key="_Plus">
 							<string key="name">_Plus</string>
-							<string key="candidateClassName">UIButton</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="_Point">
-							<string key="name">_Point</string>
 							<string key="candidateClassName">UIButton</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="mainText">

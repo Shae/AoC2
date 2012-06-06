@@ -10,10 +10,11 @@
 
 @interface MainViewController : UIViewController <FlipsideViewControllerDelegate>{
     NSString *screenString;
-    float screenNum;
-    float holdNum;
-    float answer;
+    int screenNum;
+    int holdNum;
+    int answer;
     IBOutlet UISwitch *mySwitch;
+    IBOutlet UISegmentedControl *BGswitch;
 }
 @property (weak, nonatomic) IBOutlet UITextField *mainText;
 @property (weak, nonatomic) IBOutlet UIButton *One1;
@@ -26,7 +27,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *Seven7;
 @property (weak, nonatomic) IBOutlet UIButton *Eight8;
 @property (weak, nonatomic) IBOutlet UIButton *Nine9;
-@property (weak, nonatomic) IBOutlet UIButton *_Point;
 @property (weak, nonatomic) IBOutlet UIButton *_Equals;
 @property (weak, nonatomic) IBOutlet UIButton *_Plus;
 
@@ -44,12 +44,8 @@
 - (IBAction)Nine:(UIButton *)sender;
 - (IBAction)Plus:(UIButton *)sender;
 - (IBAction)Equals:(UIButton *)sender;
-- (IBAction)Point:(UIButton *)sender;
-
-
+- (IBAction)BGtoggle:(id)sender;
 - (IBAction)Clear:(UIButton *)sender;
-
-
--(void)switchIT;
+- (void)switchIT;
 
 @end
