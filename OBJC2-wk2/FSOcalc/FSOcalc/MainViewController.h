@@ -13,9 +13,10 @@
     float screenNum;
     float holdNum;
     float answer;
+    IBOutlet UISwitch *mySwitch;
 }
 @property (weak, nonatomic) IBOutlet UITextField *mainText;
-- (IBAction)Toggle:(UISwitch *)sender;
+
 - (IBAction)showInfo:(id)sender;
 - (IBAction)Zero:(UIButton *)sender;
 - (IBAction)One:(UIButton *)sender;
@@ -31,9 +32,10 @@
 - (IBAction)Equals:(UIButton *)sender;
 - (IBAction)Point:(UIButton *)sender;
 
+
 - (IBAction)Clear:(UIButton *)sender;
 
 
-
+-(void)switchIT;
 
 @end

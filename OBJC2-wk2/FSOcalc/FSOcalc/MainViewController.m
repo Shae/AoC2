@@ -14,27 +14,32 @@
 
 @implementation MainViewController
 @synthesize mainText;
+//@synthesize mySwitch;
 
 
 
 
 - (void)viewDidLoad
 {
+
+    [super viewDidLoad];
+    // Do any additional setup after loading the view, typically from a nib.
+    
     ///// DEFAULT VALUES /////
     screenNum = 0;
     holdNum = 0;
     answer = 0;
+    [mySwitch addTarget:self action:@selector(switchIT) forControlEvents:UIControlEventValueChanged];
     
-    
-    
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+	
 }
 
 - (void)viewDidUnload
 {
 
     [self setMainText:nil];
+
+    mySwitch = nil;
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -171,9 +176,9 @@
 
 - (IBAction)Point:(UIButton *)sender {
     if( screenString == nil){
-        screenString = @".";
+        screenString = @"0.";
         NSLog(@"%@", screenString);
-    }else{
+    }else if (screenString ) {
         screenString = [screenString stringByAppendingString: @"."];
         NSLog(@"%@", screenString);
     }
@@ -208,14 +213,17 @@
     
 
 
-
-
-
-
-
-
-- (IBAction)Toggle:(UISwitch *)sender {
+-(void)switchIT{
+    if (mySwitch.on) {
+        NSLog(@"Switch is on");
+    }else{
+        NSLog(@"Switch is off");
+    }
 }
+
+
+
+
 
 
 
