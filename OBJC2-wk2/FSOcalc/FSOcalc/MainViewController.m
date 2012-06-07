@@ -27,6 +27,9 @@
 @synthesize Nine9;
 @synthesize _Equals;
 @synthesize _Plus;
+@synthesize _Minus;
+@synthesize _Multiply;
+@synthesize _Divide;
 
 
 
@@ -44,6 +47,7 @@
     screenNum = 0;
     holdNum = 0;
     answer = 0;
+    actionTag = 0;
     [mySwitch addTarget:self action:@selector(switchIT) forControlEvents:UIControlEventValueChanged];
     
 	
@@ -71,6 +75,9 @@
     [self set_Plus:nil];
 
 
+    [self set_Minus:nil];
+    [self set_Multiply:nil];
+    [self set_Divide:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -205,16 +212,19 @@
     mainText.text = screenString;
 }
 
+///////////  Actions  //////////// 
 
 - (IBAction)Plus:(UIButton *)sender {
     if (screenString == @""){
         mainText.text = @"";
         screenString = @"";
+        actionTag = 1;
     }else if((screenString != @"") && (holdNum == 0)){
         holdNum = [screenString floatValue];
         mainText.text = @"";
         screenString = @"";
         NSLog(@"+");
+        actionTag = 1;
     }else if ((screenString != @"") && (holdNum != 0 )) {
         holdNum = holdNum + [screenString intValue];
         mainText.text = @"";
@@ -223,54 +233,172 @@
     }
 }
 
+
+
+- (IBAction)Minus:(UIButton *)sender {
+    if (screenString == @""){
+        mainText.text = @"";
+        screenString = @"";
+    }else if((screenString != @"") && (holdNum == 0)){
+        holdNum = [screenString floatValue];
+        mainText.text = @"";
+        screenString = @"";
+        NSLog(@"-");
+    }else if ((screenString != @"") && (holdNum != 0 )) {
+        holdNum = holdNum - [screenString intValue];
+        mainText.text = @"";
+        screenString = @"";
+        NSLog(@"-");
+    }
+}
+
+- (IBAction)Multiply:(UIButton *)sender {
+    if (screenString == @""){
+        mainText.text = @"";
+        screenString = @"";
+    }else if((screenString != @"") && (holdNum == 0)){
+        holdNum = [screenString floatValue];
+        mainText.text = @"";
+        screenString = @"";
+        NSLog(@"-");
+    }else if ((screenString != @"") && (holdNum != 0 )) {
+        holdNum = holdNum - [screenString intValue];
+        mainText.text = @"";
+        screenString = @"";
+        NSLog(@"-");
+    }
+}
+
+- (IBAction)Divide:(UIButton *)sender {
+    if (screenString == @""){
+        mainText.text = @"";
+        screenString = @"";
+    }else if((screenString != @"") && (holdNum == 0)){
+        holdNum = [screenString floatValue];
+        mainText.text = @"";
+        screenString = @"";
+        NSLog(@"-");
+    }else if ((screenString != @"") && (holdNum != 0 )) {
+        holdNum = holdNum - [screenString intValue];
+        mainText.text = @"";
+        screenString = @"";
+        NSLog(@"-");
+    }
+}
+
+
+-(IBAction)actionTagMethod:(id)sender{
+    
+	if (([sender tag] == 0) && (holdNum == 0)){         
+        actionTag = 0;                                  //do nothing
+    }else if(([sender tag] == 0) && (actionTag == 0)){
+        mainText.text = mainText.text;                    // screen stays the same
+        NSLog(@"%i", holdNum);
+    }else if(([sender tag] == 0) && (actionTag == 1)){
+        holdNum = holdNum + [mainText.text intValue];    // holdNum + Screen = holdNum
+        NSLog(@"%i", holdNum);
+    }else if(([sender tag] == 0) && (actionTag == 2)){
+        holdNum = holdNum - [mainText.text intValue];    // holdNum - Screen = holdNum
+        NSLog(@"%i", holdNum);
+    }else if(([sender tag] == 0) && (actionTag == 3)){
+        holdNum = holdNum * [mainText.text intValue];    // holdNum * Screen = holdNum
+        NSLog(@"%i", holdNum);
+    }else if(([sender tag] == 0) && (actionTag == 4)){
+        holdNum = holdNum / [mainText.text intValue];    // holdNum / Screen = holdNum
+        NSLog(@"%i", holdNum);
+    }
+    /*
+    else if (([sender tag] == 1)&&(holdNum == 0)){   // Minus
+        actionTag = 1;
+        holdNum = [mainText.text intValue];
+        mainText.text = @"";
+        screenString = @"";
+        NSLog(@"-");
+    }else if([sender tag] == 1){   // Plus
+        actionTag = 1;
+        holdNum = holdNum +[mainText.text intValue];
+        mainText.text = @"";
+        screenString = @"";
+        NSLog(@"+");
+    }else if (([sender tag] == 2)&&(holdNum == 0)){   // Minus
+        actionTag = 2;
+        holdNum = [mainText.text intValue];
+        mainText.text = @"";
+        screenString = @"";
+        NSLog(@"-");
+    }else if ([sender tag] == 2){   // Minus
+        actionTag = 2;
+        holdNum = holdNum - [mainText.text intValue];
+        mainText.text = @"";
+        screenString = @"";
+        NSLog(@"-");
+    }else if ([sender tag] == 3){   // Multiply
+        actionTag = 3;
+        holdNum = holdNum *[screenString intValue];
+        mainText.text = @"";
+        screenString = @"";
+        NSLog(@"x");
+    }else if ([sender tag] == 4){   // Divide
+        actionTag = 4;
+        holdNum = holdNum /[screenString intValue];
+        mainText.text = @"";
+        screenString = @"";
+        NSLog(@"/");
+    }
+     */
+    /*
+	screenNum = 0;
+	mainText.text = [NSString stringWithFormat:@"%i",holdNum];  
+    actionTag = [sender tag];
+    if ([sender tag] == 0) holdNum = 0;  
+*/
+    
+}
+
+/*
 - (IBAction)Equals:(UIButton *)sender {
     if ((screenString != @"") && (holdNum != 0)){
         answer = holdNum + [screenString intValue];
         NSLog(@"=");
         NSLog(@"%i", answer);
         mainText.text = [NSString stringWithFormat: @"%i",answer];
-      
     }
 }
-    
+*/    
 
 
 -(void)switchIT{
     if (mySwitch.on) {
-        screenString = @"";
-        mainText.text = @"";
+        screenString    = @"";
+        mainText.text   = @"";
         NSLog(@"Switch is on");
-        
-        One1.enabled = YES;
-        Two2.enabled = YES;
-        Three3.enabled = YES;
-        Four4.enabled = YES;
-        Five5.enabled = YES;
-        Six6.enabled = YES;
-        Seven7.enabled = YES;
-        Eight8.enabled = YES;
-        Nine9.enabled = YES;
-        _Plus.enabled = YES;
+        One1.enabled    = YES;
+        Two2.enabled    = YES;
+        Three3.enabled  = YES;
+        Four4.enabled   = YES;
+        Five5.enabled   = YES;
+        Six6.enabled    = YES;
+        Seven7.enabled  = YES;
+        Eight8.enabled  = YES;
+        Nine9.enabled   = YES;
+        _Plus.enabled   = YES;
         _Equals.enabled = YES;
-
-        
     }else{
-        screenString = @"";
-        mainText.text = @"";
+        screenString    = @"";
+        mainText.text   = @"";
         NSLog(@"Switch is off");
-        
-        One1.enabled = NO;
-        One1.enabled = NO;
-        Two2.enabled = NO;
-        Three3.enabled = NO;
-        Four4.enabled = NO;
-        Five5.enabled = NO;
-        Six6.enabled = NO;
-        Seven7.enabled = NO;
-        Eight8.enabled = NO;
-        Nine9.enabled = NO;
-        Zero0.enabled = NO;
-        _Plus.enabled = NO;
+        One1.enabled    = NO;
+        One1.enabled    = NO;
+        Two2.enabled    = NO;
+        Three3.enabled  = NO;
+        Four4.enabled   = NO;
+        Five5.enabled   = NO;
+        Six6.enabled    = NO;
+        Seven7.enabled  = NO;
+        Eight8.enabled  = NO;
+        Nine9.enabled   = NO;
+        Zero0.enabled   = NO;
+        _Plus.enabled   = NO;
         _Equals.enabled = NO;
     }
 }
@@ -279,25 +407,18 @@
 -(IBAction)BGtoggle:(id)sender {
     
     if (BGswitch.selectedSegmentIndex == 0) {
-        
-         self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"zebra.jpg"]];
-        One1.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"zebra.jpg"]];
+        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"zebra.jpg"]];
         NSLog(@"White BG Selected");
-        
     }
     
     if (BGswitch.selectedSegmentIndex == 1) {
-        
         self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"gator.jpg"]];
         NSLog(@"Blue BG Selected");
-        
     }
     
     if (BGswitch.selectedSegmentIndex == 2) {
-        
         self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"cheetah.jpg"]];
         NSLog(@"Green BG Selected");
-        
     }
     
 } 

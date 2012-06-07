@@ -13,6 +13,7 @@
     int screenNum;
     int holdNum;
     int answer;
+    int actionTag;
     IBOutlet UISwitch *mySwitch;
     IBOutlet UISegmentedControl *BGswitch;
 }
@@ -27,11 +28,16 @@
 @property (weak, nonatomic) IBOutlet UIButton *Seven7;
 @property (weak, nonatomic) IBOutlet UIButton *Eight8;
 @property (weak, nonatomic) IBOutlet UIButton *Nine9;
+
 @property (weak, nonatomic) IBOutlet UIButton *_Equals;
 @property (weak, nonatomic) IBOutlet UIButton *_Plus;
+@property (weak, nonatomic) IBOutlet UIButton *_Minus;
+@property (weak, nonatomic) IBOutlet UIButton *_Multiply;
+@property (weak, nonatomic) IBOutlet UIButton *_Divide;
 
 
 - (IBAction)showInfo:(id)sender;
+
 - (IBAction)Zero:(UIButton *)sender;
 - (IBAction)One:(UIButton *)sender;
 - (IBAction)Two:(UIButton *)sender;
@@ -42,10 +48,18 @@
 - (IBAction)Seven:(UIButton *)sender;
 - (IBAction)Eight:(UIButton *)sender;
 - (IBAction)Nine:(UIButton *)sender;
-- (IBAction)Plus:(UIButton *)sender;
-- (IBAction)Equals:(UIButton *)sender;
+
 - (IBAction)BGtoggle:(id)sender;
 - (IBAction)Clear:(UIButton *)sender;
+
+- (IBAction)actionTagMethod:(id)sender;
 - (void)switchIT;
 
+
+- (IBAction)Plus:(UIButton *)sender;
+- (IBAction)Minus:(UIButton *)sender;
+- (IBAction)Multiply:(UIButton *)sender;
+- (IBAction)Divide:(UIButton *)sender;
+
+- (IBAction)Equals:(UIButton *)sender;
 @end
