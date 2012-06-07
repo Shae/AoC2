@@ -25,11 +25,15 @@
 @synthesize Seven7;
 @synthesize Eight8;
 @synthesize Nine9;
+@synthesize _Point;
 @synthesize _Equals;
 @synthesize _Plus;
 @synthesize _Minus;
 @synthesize _Multiply;
 @synthesize _Divide;
+@synthesize _Clear;
+@synthesize _AllClear;
+@synthesize _BGselector;
 
 
 
@@ -43,7 +47,7 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     ///// DEFAULT VALUES /////
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"zebra.jpg"]];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"cheetah.jpg"]];
     screenNum = 0;
     holdNum = 0;
     answer = 0;
@@ -71,13 +75,18 @@
     [self setSeven7:nil];
     [self setEight8:nil];
     [self setNine9:nil];
+
     [self set_Equals:nil];
     [self set_Plus:nil];
-
-
     [self set_Minus:nil];
     [self set_Multiply:nil];
     [self set_Divide:nil];
+    [self set_Point:nil];
+    
+    [self set_Clear:nil];
+    [self set_AllClear:nil];
+    
+    [self set_BGselector:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -212,22 +221,33 @@
     mainText.text = screenString;
 }
 
+- (IBAction)Point:(UIButton *)sender {
+    if( screenString == nil){
+        screenString = @"0.";
+        NSLog(@"%@", screenString);
+    }else if ( screenString != nil){
+        screenString = [screenString stringByAppendingString: @"."];
+        NSLog(@"%@", screenString);
+    }
+    mainText.text = screenString;
+}
+
 ///////////  Actions  //////////// 
 
 - (IBAction)Plus:(UIButton *)sender {
-    if (screenString == @""){
-        mainText.text = @"";
-        screenString = @"";
-    }else if((screenString != @"") && (holdNum == 0)){
+    if (screenString == nil){
+        mainText.text = nil;
+        screenString = nil;
+    }else if((screenString != nil) && (holdNum == 0)){
         holdNum = [mainText.text floatValue];
-        mainText.text = @"";
-        screenString = @"";
+        mainText.text = nil;
+        screenString = nil;
         NSLog(@"+");
         actionTag = 1;
-    }else if ((screenString != @"") && (holdNum != 0 )) {
-        holdNum = holdNum + [mainText.text intValue];
-        mainText.text = @"";
-        screenString = @"";
+    }else if ((screenString != nil) && (holdNum != 0 )) {
+        holdNum = holdNum + [mainText.text floatValue];
+        mainText.text = nil;
+        screenString = nil;
         NSLog(@"+");
         actionTag = 1;
     }
@@ -237,57 +257,57 @@
 
 
 - (IBAction)Minus:(UIButton *)sender {
-    if (screenString == @""){
-        mainText.text = @"";
-        screenString = @"";
-    }else if((screenString != @"") && (holdNum == 0)){
+    if (screenString == nil){
+        mainText.text = nil;
+        screenString = nil;
+    }else if((screenString != nil) && (holdNum == 0)){
         holdNum = [mainText.text floatValue];
-        mainText.text = @"";
-        screenString = @"";
+        mainText.text = nil;
+        screenString = nil;
         NSLog(@"-");
         actionTag = 2;
-    }else if ((screenString != @"") && (holdNum != 0 )) {
-        holdNum = holdNum - [mainText.text intValue];
-        mainText.text = @"";
-        screenString = @"";
+    }else if ((screenString != nil) && (holdNum != 0 )) {
+        holdNum = holdNum - [mainText.text floatValue];
+        mainText.text = nil;
+        screenString = nil;
         NSLog(@"-");
         actionTag = 2;
     }
 }
 
 - (IBAction)Multiply:(UIButton *)sender {
-    if (screenString == @""){
-        mainText.text = @"";
-        screenString = @"";
-    }else if((screenString != @"") && (holdNum == 0)){
+    if (screenString == nil){
+        mainText.text = nil;
+        screenString = nil;
+    }else if((screenString != nil) && (holdNum == 0)){
         holdNum = [mainText.text floatValue];
-        mainText.text = @"";
-        screenString = @"";
+        mainText.text = nil;
+        screenString = nil;
         NSLog(@"x");
         actionTag = 3;
-    }else if ((screenString != @"") && (holdNum != 0 )) {
-        holdNum = holdNum * [mainText.text intValue];
-        mainText.text = @"";
-        screenString = @"";
+    }else if ((screenString != nil) && (holdNum != 0 )) {
+        holdNum = holdNum * [mainText.text floatValue];
+        mainText.text = nil;
+        screenString = nil;
         NSLog(@"x");
         actionTag = 3;
     }
 }
 
 - (IBAction)Divide:(UIButton *)sender {
-    if (screenString == @""){
-        mainText.text = @"";
-        screenString = @"";
-    }else if((screenString != @"") && (holdNum == 0)){
+    if (screenString == nil){
+        mainText.text = nil;
+        screenString = nil;
+    }else if((screenString != nil) && (holdNum == 0)){
         holdNum = [mainText.text floatValue];
-        mainText.text = @"";
-        screenString = @"";
+        mainText.text = nil;
+        screenString = nil;
         NSLog(@"/");
         actionTag = 4;
-    }else if ((screenString != @"") && (holdNum != 0 )) {
-        holdNum = holdNum / [mainText.text intValue];
-        mainText.text = @"";
-        screenString = @"";
+    }else if ((screenString != nil) && (holdNum != 0 )) {
+        holdNum = holdNum / [mainText.text floatValue];
+        mainText.text = nil;
+        screenString = nil;
         NSLog(@"/");
         actionTag = 4;
     }
@@ -302,91 +322,40 @@
         mainText.text = mainText.text;                    // screen stays the same
         NSLog(@"%@", mainText.text);
     }else if(([sender tag] == 0) && (actionTag == 1)){
-        answer = holdNum + [mainText.text intValue];    // holdNum + Screen = holdNum
+        answer = holdNum + [mainText.text floatValue];    // holdNum + Screen = holdNum
         holdNum = 0;
-        mainText.text = [NSString stringWithFormat:@"%i", answer];
-        NSLog(@"%i", answer);
+        mainText.text = [NSString stringWithFormat:@"%0.2f", answer];
+        screenString = [NSString stringWithFormat:@"%0.2f", answer];
+        NSLog(@"%f", answer);
     }else if(([sender tag] == 0) && (actionTag == 2)){
         answer = holdNum - [mainText.text intValue];    // holdNum - Screen = holdNum
         holdNum = 0;
-        mainText.text = [NSString stringWithFormat:@"%i", answer];
-        NSLog(@"%i", answer);
+        mainText.text = [NSString stringWithFormat:@"%0.2f", answer];
+        screenString = [NSString stringWithFormat:@"%0.2f", answer];
+        NSLog(@"%f", answer);
     }else if(([sender tag] == 0) && (actionTag == 3)){
-        answer = holdNum * [mainText.text intValue];    // holdNum * Screen = holdNum
+        answer = holdNum * [mainText.text floatValue];    // holdNum * Screen = holdNum
         holdNum = 0;
-        mainText.text = [NSString stringWithFormat:@"%i", answer];
-        NSLog(@"%i", answer);
+        mainText.text = [NSString stringWithFormat:@"%0.2f", answer];
+        screenString = [NSString stringWithFormat:@"%0.2f", answer];
+        NSLog(@"%f", answer);
     }else if(([sender tag] == 0) && (actionTag == 4)){
-        answer = holdNum / [mainText.text intValue];    // holdNum / Screen = holdNum
+        answer = holdNum / [mainText.text floatValue];    // holdNum / Screen = holdNum
         holdNum = 0;
-        mainText.text = [NSString stringWithFormat:@"%i", answer];
-        NSLog(@"%i", answer);
+        mainText.text = [NSString stringWithFormat:@"%0.2f", answer];
+        screenString = [NSString stringWithFormat:@"%0.2f", answer];
+        NSLog(@"%f", answer);
     }
-    /*
-    else if (([sender tag] == 1)&&(holdNum == 0)){   // Minus
-        actionTag = 1;
-        holdNum = [mainText.text intValue];
-        mainText.text = @"";
-        screenString = @"";
-        NSLog(@"-");
-    }else if([sender tag] == 1){   // Plus
-        actionTag = 1;
-        holdNum = holdNum +[mainText.text intValue];
-        mainText.text = @"";
-        screenString = @"";
-        NSLog(@"+");
-    }else if (([sender tag] == 2)&&(holdNum == 0)){   // Minus
-        actionTag = 2;
-        holdNum = [mainText.text intValue];
-        mainText.text = @"";
-        screenString = @"";
-        NSLog(@"-");
-    }else if ([sender tag] == 2){   // Minus
-        actionTag = 2;
-        holdNum = holdNum - [mainText.text intValue];
-        mainText.text = @"";
-        screenString = @"";
-        NSLog(@"-");
-    }else if ([sender tag] == 3){   // Multiply
-        actionTag = 3;
-        holdNum = holdNum *[screenString intValue];
-        mainText.text = @"";
-        screenString = @"";
-        NSLog(@"x");
-    }else if ([sender tag] == 4){   // Divide
-        actionTag = 4;
-        holdNum = holdNum /[screenString intValue];
-        mainText.text = @"";
-        screenString = @"";
-        NSLog(@"/");
-    }
-     */
-    /*
-	screenNum = 0;
-	mainText.text = [NSString stringWithFormat:@"%i",holdNum];  
-    actionTag = [sender tag];
-    if ([sender tag] == 0) holdNum = 0;  
-*/
-    
 }
 
-/*
-- (IBAction)Equals:(UIButton *)sender {
-    if ((screenString != @"") && (holdNum != 0)){
-        answer = holdNum + [screenString intValue];
-        NSLog(@"=");
-        NSLog(@"%i", answer);
-        mainText.text = [NSString stringWithFormat: @"%i",answer];
-    }
-}
-*/    
+
 
 
 -(void)switchIT{
     if (mySwitch.on) {
-        screenString    = @"";
-        mainText.text   = @"";
-        NSLog(@"Switch is on");
+        screenString    = nil;
+        mainText.text   = @"0";
+        NSLog(@"Calculator ON");
         One1.enabled    = YES;
         Two2.enabled    = YES;
         Three3.enabled  = YES;
@@ -396,12 +365,19 @@
         Seven7.enabled  = YES;
         Eight8.enabled  = YES;
         Nine9.enabled   = YES;
+        _Point.enabled  = YES;
         _Plus.enabled   = YES;
+        _Minus.enabled  = YES;
+        _Divide.enabled = YES;
+        _Multiply.enabled = YES;
         _Equals.enabled = YES;
+        _Clear.enabled  = YES;
+        _AllClear.enabled = YES;
+        _BGselector.enabled = YES;
     }else{
-        screenString    = @"";
-        mainText.text   = @"";
-        NSLog(@"Switch is off");
+        screenString    = nil;
+        mainText.text   = nil;
+        NSLog(@"Calculator powering down...");
         One1.enabled    = NO;
         One1.enabled    = NO;
         Two2.enabled    = NO;
@@ -413,8 +389,15 @@
         Eight8.enabled  = NO;
         Nine9.enabled   = NO;
         Zero0.enabled   = NO;
+        _Point.enabled  = NO;
         _Plus.enabled   = NO;
+        _Minus.enabled  = NO;
+        _Divide.enabled = NO;
+        _Multiply.enabled = NO;
         _Equals.enabled = NO;
+        _Clear.enabled  = NO;
+        _AllClear.enabled = NO;
+        _BGselector.enabled = NO;
     }
 }
 
@@ -422,18 +405,18 @@
 -(IBAction)BGtoggle:(id)sender {
     
     if (BGswitch.selectedSegmentIndex == 0) {
-        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"zebra.jpg"]];
-        NSLog(@"White BG Selected");
+        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"cheetah.jpg"]];
+        NSLog(@"Cheetah Print BG Selected");
     }
     
     if (BGswitch.selectedSegmentIndex == 1) {
         self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"gator.jpg"]];
-        NSLog(@"Blue BG Selected");
+        NSLog(@"Gator Print BG Selected");
     }
     
     if (BGswitch.selectedSegmentIndex == 2) {
-        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"cheetah.jpg"]];
-        NSLog(@"Green BG Selected");
+        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"zebra.jpg"]];
+        NSLog(@"Zebra Print BG Selected");
     }
     
 } 
@@ -441,10 +424,15 @@
 
 
 - (IBAction)Clear:(UIButton *)sender {
-        mainText.text = @"";
-        screenString = @"";
+        mainText.text = nil;
+        screenString = nil;
+}
+
+- (IBAction)allClear:(UIButton *)sender {
+    mainText.text = nil;
+    screenString = nil;
     holdNum = 0;
-    
+    actionTag = 0;
 }
 
 @end

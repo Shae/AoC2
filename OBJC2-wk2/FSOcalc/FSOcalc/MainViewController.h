@@ -10,9 +10,9 @@
 
 @interface MainViewController : UIViewController <FlipsideViewControllerDelegate>{
     NSString *screenString;
-    int screenNum;
-    int holdNum;
-    int answer;
+    float screenNum;
+    float holdNum;
+    float answer;
     int actionTag;
     IBOutlet UISwitch *mySwitch;
     IBOutlet UISegmentedControl *BGswitch;
@@ -28,12 +28,16 @@
 @property (weak, nonatomic) IBOutlet UIButton *Seven7;
 @property (weak, nonatomic) IBOutlet UIButton *Eight8;
 @property (weak, nonatomic) IBOutlet UIButton *Nine9;
+@property (weak, nonatomic) IBOutlet UIButton *_Point;
 
 @property (weak, nonatomic) IBOutlet UIButton *_Equals;
 @property (weak, nonatomic) IBOutlet UIButton *_Plus;
 @property (weak, nonatomic) IBOutlet UIButton *_Minus;
 @property (weak, nonatomic) IBOutlet UIButton *_Multiply;
 @property (weak, nonatomic) IBOutlet UIButton *_Divide;
+@property (weak, nonatomic) IBOutlet UIButton *_Clear;
+@property (weak, nonatomic) IBOutlet UIButton *_AllClear;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *_BGselector;
 
 
 - (IBAction)showInfo:(id)sender;
@@ -48,6 +52,7 @@
 - (IBAction)Seven:(UIButton *)sender;
 - (IBAction)Eight:(UIButton *)sender;
 - (IBAction)Nine:(UIButton *)sender;
+- (IBAction)Point:(UIButton *)sender;
 
 - (IBAction)BGtoggle:(id)sender;
 - (IBAction)Clear:(UIButton *)sender;
@@ -60,6 +65,7 @@
 - (IBAction)Minus:(UIButton *)sender;
 - (IBAction)Multiply:(UIButton *)sender;
 - (IBAction)Divide:(UIButton *)sender;
+- (IBAction)allClear:(UIButton *)sender;
 
-- (IBAction)Equals:(UIButton *)sender;
+
 @end
