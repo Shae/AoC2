@@ -9,7 +9,7 @@
 #import "WeaponClass.h"
 
 @interface edgeWeapon : WeaponClass{
-    int bladedSides;
+    int sharpnessScale;  // 1-5,  5 is the sharpest
 }
 -(int)getDamage;
 @end

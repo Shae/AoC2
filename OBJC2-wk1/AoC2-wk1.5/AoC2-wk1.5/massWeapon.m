@@ -10,9 +10,23 @@
 
 @implementation massWeapon
 
+-(id)init
+{
+    if (self = [super init]) 
+    {    
+        weaponName = @"Default Mass Weapon";
+        weight = 6;
+        handsNeeded = 1;
+        handleLength = 2;
+        damage = 0;
+    }
+    return self;
+} 
+
+
 -(int)getDamage{
-    damage = (handsNeeded * (2 * weight));
-    NSLog(@"The damage for this weaon is %i",damage);
+    damage = (handleLength * (4 * weight));
+    NSLog(@"The damage for this mass weapon is %i",damage);
     return damage;
 }
 

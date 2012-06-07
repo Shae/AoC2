@@ -27,7 +27,7 @@
 
 -(int)getDamage{
     damage = (handsNeeded * (length * weight));
-    NSLog(@"The damage for this weaon is %i",damage);
+    NSLog(@"The damage for this pole weapon is %i",damage);
     return damage;
 }
 

@@ -15,8 +15,9 @@
     if (self = [super init]) 
     {    
         weaponName = @"Default Edged Weapon";
-        weight = 6;
+        weight = 2;
         handsNeeded = 2;
+        sharpnessScale = 1;
         damage = 0;
     }
     return self;
@@ -24,8 +25,8 @@
 
 
 -(int)getDamage{
-    damage = (1.5 * (handsNeeded * weight));
-    NSLog(@"The damage for this weaon is %i",damage);
+    damage = (sharpnessScale * (handsNeeded * weight));
+    NSLog(@"The damage for this edged weapon is %i",damage);
     return damage;
 }
 

@@ -8,6 +8,9 @@
 
 #import "WeaponClass.h"
 
-@interface massWeapon : WeaponClass
+
+@interface massWeapon : WeaponClass{
+    int handleLength;
+}
 -(int)getDamage;
 @end
