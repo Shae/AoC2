@@ -218,19 +218,20 @@
     if (screenString == @""){
         mainText.text = @"";
         screenString = @"";
-        actionTag = 1;
     }else if((screenString != @"") && (holdNum == 0)){
-        holdNum = [screenString floatValue];
+        holdNum = [mainText.text floatValue];
         mainText.text = @"";
         screenString = @"";
         NSLog(@"+");
         actionTag = 1;
     }else if ((screenString != @"") && (holdNum != 0 )) {
-        holdNum = holdNum + [screenString intValue];
+        holdNum = holdNum + [mainText.text intValue];
         mainText.text = @"";
         screenString = @"";
         NSLog(@"+");
+        actionTag = 1;
     }
+    
 }
 
 
@@ -240,15 +241,17 @@
         mainText.text = @"";
         screenString = @"";
     }else if((screenString != @"") && (holdNum == 0)){
-        holdNum = [screenString floatValue];
+        holdNum = [mainText.text floatValue];
         mainText.text = @"";
         screenString = @"";
         NSLog(@"-");
+        actionTag = 2;
     }else if ((screenString != @"") && (holdNum != 0 )) {
-        holdNum = holdNum - [screenString intValue];
+        holdNum = holdNum - [mainText.text intValue];
         mainText.text = @"";
         screenString = @"";
         NSLog(@"-");
+        actionTag = 2;
     }
 }
 
@@ -257,15 +260,17 @@
         mainText.text = @"";
         screenString = @"";
     }else if((screenString != @"") && (holdNum == 0)){
-        holdNum = [screenString floatValue];
+        holdNum = [mainText.text floatValue];
         mainText.text = @"";
         screenString = @"";
-        NSLog(@"-");
+        NSLog(@"x");
+        actionTag = 3;
     }else if ((screenString != @"") && (holdNum != 0 )) {
-        holdNum = holdNum - [screenString intValue];
+        holdNum = holdNum * [mainText.text intValue];
         mainText.text = @"";
         screenString = @"";
-        NSLog(@"-");
+        NSLog(@"x");
+        actionTag = 3;
     }
 }
 
@@ -274,15 +279,17 @@
         mainText.text = @"";
         screenString = @"";
     }else if((screenString != @"") && (holdNum == 0)){
-        holdNum = [screenString floatValue];
+        holdNum = [mainText.text floatValue];
         mainText.text = @"";
         screenString = @"";
-        NSLog(@"-");
+        NSLog(@"/");
+        actionTag = 4;
     }else if ((screenString != @"") && (holdNum != 0 )) {
-        holdNum = holdNum - [screenString intValue];
+        holdNum = holdNum / [mainText.text intValue];
         mainText.text = @"";
         screenString = @"";
-        NSLog(@"-");
+        NSLog(@"/");
+        actionTag = 4;
     }
 }
 
@@ -293,19 +300,27 @@
         actionTag = 0;                                  //do nothing
     }else if(([sender tag] == 0) && (actionTag == 0)){
         mainText.text = mainText.text;                    // screen stays the same
-        NSLog(@"%i", holdNum);
+        NSLog(@"%@", mainText.text);
     }else if(([sender tag] == 0) && (actionTag == 1)){
-        holdNum = holdNum + [mainText.text intValue];    // holdNum + Screen = holdNum
-        NSLog(@"%i", holdNum);
+        answer = holdNum + [mainText.text intValue];    // holdNum + Screen = holdNum
+        holdNum = 0;
+        mainText.text = [NSString stringWithFormat:@"%i", answer];
+        NSLog(@"%i", answer);
     }else if(([sender tag] == 0) && (actionTag == 2)){
-        holdNum = holdNum - [mainText.text intValue];    // holdNum - Screen = holdNum
-        NSLog(@"%i", holdNum);
+        answer = holdNum - [mainText.text intValue];    // holdNum - Screen = holdNum
+        holdNum = 0;
+        mainText.text = [NSString stringWithFormat:@"%i", answer];
+        NSLog(@"%i", answer);
     }else if(([sender tag] == 0) && (actionTag == 3)){
-        holdNum = holdNum * [mainText.text intValue];    // holdNum * Screen = holdNum
-        NSLog(@"%i", holdNum);
+        answer = holdNum * [mainText.text intValue];    // holdNum * Screen = holdNum
+        holdNum = 0;
+        mainText.text = [NSString stringWithFormat:@"%i", answer];
+        NSLog(@"%i", answer);
     }else if(([sender tag] == 0) && (actionTag == 4)){
-        holdNum = holdNum / [mainText.text intValue];    // holdNum / Screen = holdNum
-        NSLog(@"%i", holdNum);
+        answer = holdNum / [mainText.text intValue];    // holdNum / Screen = holdNum
+        holdNum = 0;
+        mainText.text = [NSString stringWithFormat:@"%i", answer];
+        NSLog(@"%i", answer);
     }
     /*
     else if (([sender tag] == 1)&&(holdNum == 0)){   // Minus
