@@ -13,7 +13,7 @@
 
 -(void)setWeaponName: (NSString*)newWeaponName{
     weaponName = newWeaponName;
-    NSLog(@"Name has been set to %@", weaponName);
+    NSLog(@"This weapon is a %@", weaponName);
     
 }
 
@@ -29,12 +29,15 @@
 -(NSString*)getWeaponName{
     return weaponName;
 }
+
 -(int)getWeight{
     return weight;
 }
+
 -(int)getHands{
     return handsNeeded;
 }
+
 -(int)getDamage{
     damage = weight * handsNeeded;
     return damage;

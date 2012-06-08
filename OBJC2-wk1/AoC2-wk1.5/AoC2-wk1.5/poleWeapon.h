@@ -13,5 +13,5 @@
 }
 
 -(int)getDamage;
--(void)setLength : (int)lengthInFeet;
+-(void)setPoleLength : (int)lengthInFeet;
 @end

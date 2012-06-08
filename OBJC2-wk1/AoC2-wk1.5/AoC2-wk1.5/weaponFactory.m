@@ -32,7 +32,7 @@
         
         return [[massWeapon alloc]init];
         
-    }else if(weaponCode == 2){
+    }else if(weaponCode == 3){
         
         return [[poleWeapon alloc]init];
         

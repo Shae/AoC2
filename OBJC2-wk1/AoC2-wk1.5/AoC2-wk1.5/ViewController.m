@@ -50,29 +50,29 @@
     
     
     //////////// FACTORY CALLS (Static) /////////////////
-/*    
+    
     // for the static version of the shape factory
     edgeWeapon *sword = (edgeWeapon*) [weaponFactory buildWeapon:1];
     [sword setWeaponName:@"Long Sword"];
     [sword setWeight:3];
     [sword setSharpness:3];
-    textlabel1.text = [NSString stringWithFormat:@"Weapon Name: %@    damage: %i",[sword getWeaponName], [sword getDamage]];
-    
+    textlabel1.text = [NSString stringWithFormat:@"Weapon: %@   Damage: %i",[sword getWeaponName], [sword getDamage]];
+
     // for the static version of the shape factory
     massWeapon *mace = (massWeapon*) [weaponFactory buildWeapon:2];
     [mace setWeaponName:@"Bone Mace"];
     [mace setWeight:3];
     [mace setHandleLength:2];
-    textlabel1.text = [NSString stringWithFormat:@"Weapon Name: %@    damage: %i",[mace getWeaponName], [mace getDamage]];
-    
+    textlabel2.text = [NSString stringWithFormat:@"Weapon: %@   Damage: %i",[mace getWeaponName], [mace   getDamage]];
+   
     // for the static version of the shape factory
-    poleWeapon *glave = (poleWeapon*) [weaponFactory buildWeapon:1];
-    [glave setWeaponName:@"Long Sword"];
+    poleWeapon *glave = (poleWeapon*) [weaponFactory buildWeapon:3];
+    [glave setWeaponName:@"Red Glave"];
     [glave setWeight:3];
-    [glave setLength:6];
-    textlabel1.text = [NSString stringWithFormat:@"Weapon Name: %@    damage: %i",[glave getWeaponName], [glave getDamage]];
+    [glave setPoleLength:6];
+    textlabel3.text = [NSString stringWithFormat:@"Weapon: %@   Damage: %i",[glave getWeaponName], [glave getDamage]];
 
-    */
+  
     
     
     

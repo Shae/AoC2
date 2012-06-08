@@ -33,7 +33,7 @@
 
 -(void)setHandleLength : (int)setHandleLength{
     handleLength = setHandleLength;
-    NSLog(@"The handle length for this %@ is %i",weaponName, handleLength);
+    NSLog(@"The %@'s handle length is set to %i feet",weaponName, handleLength);
 }
     
 @end
