@@ -30,4 +30,8 @@
     return damage;
 }
 
+-(void)setSharpness : (int)howSharp{
+    sharpnessScale = howSharp;
+    NSLog(@"The sharpness for this weapon has is %i",sharpnessScale);
+}
 @end

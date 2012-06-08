@@ -30,5 +30,9 @@
     NSLog(@"The damage for this pole weapon is %i",damage);
     return damage;
 }
+-(void)setLength : (int)lengthInFeet{
+    length = lengthInFeet;
+    NSLog(@"The length for this pole weapon is %i feet",length);
+}
 
 @end

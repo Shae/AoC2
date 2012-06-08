@@ -8,6 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
+typedef enum
+{
+    WEAPONCLASS_DEFAULT=0,
+    WEAPONCLASS_EDGE,
+    WEAPONCLASS_MASS,
+    WEAPONCLASS_POLE
+
+}weaponCode;
+
 @interface WeaponClass : NSObject{
     NSString *weaponName;
     int weight;

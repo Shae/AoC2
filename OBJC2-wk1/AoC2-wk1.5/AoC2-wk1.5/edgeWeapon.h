@@ -12,4 +12,5 @@
     int sharpnessScale;  // 1-5,  5 is the sharpest
 }
 -(int)getDamage;
+-(void)setSharpness : (int)howSharp;
 @end

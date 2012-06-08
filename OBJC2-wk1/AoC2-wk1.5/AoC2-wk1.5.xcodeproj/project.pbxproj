@@ -19,6 +19,7 @@
 		BFDD40C21581665100D5AED3 /* massWeapon.m in Sources */ = {isa = PBXBuildFile; fileRef = BFDD40C11581665100D5AED3 /* massWeapon.m */; };
 		BFDD40C51581667200D5AED3 /* edgeWeapon.m in Sources */ = {isa = PBXBuildFile; fileRef = BFDD40C41581667200D5AED3 /* edgeWeapon.m */; };
 		BFDD40C8158166B700D5AED3 /* poleWeapon.m in Sources */ = {isa = PBXBuildFile; fileRef = BFDD40C7158166B700D5AED3 /* poleWeapon.m */; };
+		BFDD40CB15816F2700D5AED3 /* weaponFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = BFDD40CA15816F2700D5AED3 /* weaponFactory.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,8 @@
 		BFDD40C41581667200D5AED3 /* edgeWeapon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = edgeWeapon.m; sourceTree = "<group>"; };
 		BFDD40C6158166B700D5AED3 /* poleWeapon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = poleWeapon.h; sourceTree = "<group>"; };
 		BFDD40C7158166B700D5AED3 /* poleWeapon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = poleWeapon.m; sourceTree = "<group>"; };
+		BFDD40C915816F2700D5AED3 /* weaponFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = weaponFactory.h; sourceTree = "<group>"; };
+		BFDD40CA15816F2700D5AED3 /* weaponFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = weaponFactory.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +104,8 @@
 				BFDD40C41581667200D5AED3 /* edgeWeapon.m */,
 				BFDD40C01581665100D5AED3 /* massWeapon.h */,
 				BFDD40C11581665100D5AED3 /* massWeapon.m */,
+				BFDD40C915816F2700D5AED3 /* weaponFactory.h */,
+				BFDD40CA15816F2700D5AED3 /* weaponFactory.m */,
 				BFDD40AE1581543C00D5AED3 /* ViewController.xib */,
 				BFDD40A01581543C00D5AED3 /* Supporting Files */,
 			);
@@ -187,6 +192,7 @@
 				BFDD40C21581665100D5AED3 /* massWeapon.m in Sources */,
 				BFDD40C51581667200D5AED3 /* edgeWeapon.m in Sources */,
 				BFDD40C8158166B700D5AED3 /* poleWeapon.m in Sources */,
+				BFDD40CB15816F2700D5AED3 /* weaponFactory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

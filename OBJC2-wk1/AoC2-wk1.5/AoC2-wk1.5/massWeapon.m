@@ -30,4 +30,10 @@
     return damage;
 }
 
+
+-(void)setHandleLength : (int)setHandleLength{
+    handleLength = setHandleLength;
+    NSLog(@"The handle length for this %@ is %i",weaponName, handleLength);
+}
+    
 @end
