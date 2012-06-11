@@ -1,0 +1,299 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BFDA3DBA1586866E005103A0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFDA3DB91586866E005103A0 /* UIKit.framework */; };
+		BFDA3DBC1586866E005103A0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFDA3DBB1586866E005103A0 /* Foundation.framework */; };
+		BFDA3DBE1586866E005103A0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFDA3DBD1586866E005103A0 /* CoreGraphics.framework */; };
+		BFDA3DC41586866E005103A0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BFDA3DC21586866E005103A0 /* InfoPlist.strings */; };
+		BFDA3DC61586866E005103A0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BFDA3DC51586866E005103A0 /* main.m */; };
+		BFDA3DCA1586866E005103A0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFDA3DC91586866E005103A0 /* AppDelegate.m */; };
+		BFDA3DCD1586866E005103A0 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFDA3DCC1586866E005103A0 /* MainViewController.m */; };
+		BFDA3DD01586866E005103A0 /* FlipsideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFDA3DCF1586866E005103A0 /* FlipsideViewController.m */; };
+		BFDA3DD31586866E005103A0 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFDA3DD11586866E005103A0 /* MainViewController.xib */; };
+		BFDA3DD61586866E005103A0 /* FlipsideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFDA3DD41586866E005103A0 /* FlipsideViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		BFDA3DB51586866E005103A0 /* EventPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFDA3DB91586866E005103A0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		BFDA3DBB1586866E005103A0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		BFDA3DBD1586866E005103A0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		BFDA3DC11586866E005103A0 /* EventPlanner-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EventPlanner-Info.plist"; sourceTree = "<group>"; };
+		BFDA3DC31586866E005103A0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BFDA3DC51586866E005103A0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BFDA3DC71586866E005103A0 /* EventPlanner-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EventPlanner-Prefix.pch"; sourceTree = "<group>"; };
+		BFDA3DC81586866E005103A0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BFDA3DC91586866E005103A0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BFDA3DCB1586866E005103A0 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		BFDA3DCC1586866E005103A0 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		BFDA3DCE1586866E005103A0 /* FlipsideViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlipsideViewController.h; sourceTree = "<group>"; };
+		BFDA3DCF1586866E005103A0 /* FlipsideViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlipsideViewController.m; sourceTree = "<group>"; };
+		BFDA3DD21586866E005103A0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainViewController.xib; sourceTree = "<group>"; };
+		BFDA3DD51586866E005103A0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FlipsideViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BFDA3DB21586866E005103A0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFDA3DBA1586866E005103A0 /* UIKit.framework in Frameworks */,
+				BFDA3DBC1586866E005103A0 /* Foundation.framework in Frameworks */,
+				BFDA3DBE1586866E005103A0 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BFDA3DAA1586866E005103A0 = {
+			isa = PBXGroup;
+			children = (
+				BFDA3DBF1586866E005103A0 /* EventPlanner */,
+				BFDA3DB81586866E005103A0 /* Frameworks */,
+				BFDA3DB61586866E005103A0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BFDA3DB61586866E005103A0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BFDA3DB51586866E005103A0 /* EventPlanner.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BFDA3DB81586866E005103A0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BFDA3DB91586866E005103A0 /* UIKit.framework */,
+				BFDA3DBB1586866E005103A0 /* Foundation.framework */,
+				BFDA3DBD1586866E005103A0 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BFDA3DBF1586866E005103A0 /* EventPlanner */ = {
+			isa = PBXGroup;
+			children = (
+				BFDA3DC81586866E005103A0 /* AppDelegate.h */,
+				BFDA3DC91586866E005103A0 /* AppDelegate.m */,
+				BFDA3DCB1586866E005103A0 /* MainViewController.h */,
+				BFDA3DCC1586866E005103A0 /* MainViewController.m */,
+				BFDA3DCE1586866E005103A0 /* FlipsideViewController.h */,
+				BFDA3DCF1586866E005103A0 /* FlipsideViewController.m */,
+				BFDA3DD11586866E005103A0 /* MainViewController.xib */,
+				BFDA3DD41586866E005103A0 /* FlipsideViewController.xib */,
+				BFDA3DC01586866E005103A0 /* Supporting Files */,
+			);
+			path = EventPlanner;
+			sourceTree = "<group>";
+		};
+		BFDA3DC01586866E005103A0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BFDA3DC11586866E005103A0 /* EventPlanner-Info.plist */,
+				BFDA3DC21586866E005103A0 /* InfoPlist.strings */,
+				BFDA3DC51586866E005103A0 /* main.m */,
+				BFDA3DC71586866E005103A0 /* EventPlanner-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BFDA3DB41586866E005103A0 /* EventPlanner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BFDA3DD91586866E005103A0 /* Build configuration list for PBXNativeTarget "EventPlanner" */;
+			buildPhases = (
+				BFDA3DB11586866E005103A0 /* Sources */,
+				BFDA3DB21586866E005103A0 /* Frameworks */,
+				BFDA3DB31586866E005103A0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EventPlanner;
+			productName = EventPlanner;
+			productReference = BFDA3DB51586866E005103A0 /* EventPlanner.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDA3DAC1586866E005103A0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = BFDA3DAF1586866E005103A0 /* Build configuration list for PBXProject "EventPlanner" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = BFDA3DAA1586866E005103A0;
+			productRefGroup = BFDA3DB61586866E005103A0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BFDA3DB41586866E005103A0 /* EventPlanner */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BFDA3DB31586866E005103A0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFDA3DC41586866E005103A0 /* InfoPlist.strings in Resources */,
+				BFDA3DD31586866E005103A0 /* MainViewController.xib in Resources */,
+				BFDA3DD61586866E005103A0 /* FlipsideViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BFDA3DB11586866E005103A0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFDA3DC61586866E005103A0 /* main.m in Sources */,
+				BFDA3DCA1586866E005103A0 /* AppDelegate.m in Sources */,
+				BFDA3DCD1586866E005103A0 /* MainViewController.m in Sources */,
+				BFDA3DD01586866E005103A0 /* FlipsideViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BFDA3DC21586866E005103A0 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BFDA3DC31586866E005103A0 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		BFDA3DD11586866E005103A0 /* MainViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BFDA3DD21586866E005103A0 /* en */,
+			);
+			name = MainViewController.xib;
+			sourceTree = "<group>";
+		};
+		BFDA3DD41586866E005103A0 /* FlipsideViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BFDA3DD51586866E005103A0 /* en */,
+			);
+			name = FlipsideViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BFDA3DD71586866E005103A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		BFDA3DD81586866E005103A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BFDA3DDA1586866E005103A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EventPlanner/EventPlanner-Prefix.pch";
+				INFOPLIST_FILE = "EventPlanner/EventPlanner-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		BFDA3DDB1586866E005103A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EventPlanner/EventPlanner-Prefix.pch";
+				INFOPLIST_FILE = "EventPlanner/EventPlanner-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BFDA3DAF1586866E005103A0 /* Build configuration list for PBXProject "EventPlanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFDA3DD71586866E005103A0 /* Debug */,
+				BFDA3DD81586866E005103A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BFDA3DD91586866E005103A0 /* Build configuration list for PBXNativeTarget "EventPlanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFDA3DDA1586866E005103A0 /* Debug */,
+				BFDA3DDB1586866E005103A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDA3DAC1586866E005103A0 /* Project object */;
+}
