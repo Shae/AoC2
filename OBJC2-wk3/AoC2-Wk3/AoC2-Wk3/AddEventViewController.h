@@ -8,7 +8,30 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AddEventViewController : UIViewController
+
+@protocol EventViewDelegate <NSObject>
+
+@required
+-(void)didClose: (NSString *) passEventName;
+
+@end
+
+////////////////////
+
+@interface AddEventViewController : UIViewController <UITextFieldDelegate>
+{
+    id <EventViewDelegate> Delegate;
+    __weak IBOutlet UITextField *nameField;
+    __weak IBOutlet UIButton *backgroundBtn;
+}
+
+@property (strong) id<EventViewDelegate> Delegate;
+
 
 -(IBAction)backToMain:(id)sender;
+
+-(IBAction)closeKeyboard;
+
 @end
+
+

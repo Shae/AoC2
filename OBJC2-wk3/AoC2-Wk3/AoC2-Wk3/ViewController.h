@@ -9,7 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "AddEventViewController.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <EventViewDelegate>
+{
+    IBOutlet UILabel *eventLabel;
+}
 
 
 -(IBAction)goToAddEventPage:(id)sender;

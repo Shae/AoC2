@@ -20,6 +20,11 @@
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
+-(void)didClose: (NSString *) passEventName
+{
+    eventLabel.text = passEventName;
+}
+
 - (void)viewDidUnload
 {
     [super viewDidUnload];
@@ -36,6 +41,7 @@
 {
     AddEventViewController *addEventPage = [[AddEventViewController alloc]initWithNibName:@"AddEvent" bundle:nil];
     if (addEventPage != nil){
+        addEventPage.delegate = self;
         [self presentModalViewController:addEventPage animated:YES];
     }
 }
