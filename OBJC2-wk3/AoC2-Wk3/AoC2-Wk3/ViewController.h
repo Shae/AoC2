@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AddEventViewController.h"
 
 @interface ViewController : UIViewController
 
+
+-(IBAction)goToAddEventPage:(id)sender;
 @end

@@ -31,4 +31,19 @@
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
+
+-(IBAction)goToAddEventPage:(id)sender
+{
+    AddEventViewController *addEventPage = [[AddEventViewController alloc]initWithNibName:@"AddEvent" bundle:nil];
+    if (addEventPage != nil){
+        [self presentModalViewController:addEventPage animated:YES];
+    }
+}
+
+
+
+
+
+
+
 @end

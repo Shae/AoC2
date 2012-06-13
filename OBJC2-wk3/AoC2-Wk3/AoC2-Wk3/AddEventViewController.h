@@ -10,4 +10,5 @@
 
 @interface AddEventViewController : UIViewController
 
+-(IBAction)backToMain:(id)sender;
 @end

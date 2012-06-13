@@ -39,5 +39,8 @@
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
-
+-(IBAction)backToMain:(id)sender
+{
+    
+}
 @end
