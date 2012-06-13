@@ -12,7 +12,7 @@
 @protocol EventViewDelegate <NSObject>
 
 @required
--(void)didClose: (NSString *) passEventName;
+-(void)didClose: (NSString *) passEventData;
 
 @end
 

@@ -97,16 +97,17 @@
     if ((Delegate != nil) && (newDate != nil)){
         
     //Name labe data  
-        [Delegate didClose:nameField.text];
+        //[Delegate didClose:nameField.text];
 
     //Picker View data
-         NSLog(@"%@", [newDate description]);
+        // NSLog(@"%@", [newDate description]);
         
     //Concatenate da stuffes
         eventData = [NSString stringWithFormat:@"%@ on %@", nameField.text, newDate];
-        NSLog(@"%@", eventData);
+       // NSLog(@"%@", eventData);
         
     //return to Main page 
+        [Delegate didClose:eventData];
         [self dismissModalViewControllerAnimated:YES];
         
     }

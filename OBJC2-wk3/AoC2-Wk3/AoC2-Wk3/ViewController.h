@@ -11,9 +11,12 @@
 
 @interface ViewController : UIViewController <EventViewDelegate>
 {
-    IBOutlet UILabel *eventLabel;
+
+    IBOutlet UITextView *eventField;
+    NSMutableArray *eventlist;
+
 }
 
-
+@property (nonatomic, retain) NSMutableArray *eventlist;
 -(IBAction)goToAddEventPage:(id)sender;
 @end
