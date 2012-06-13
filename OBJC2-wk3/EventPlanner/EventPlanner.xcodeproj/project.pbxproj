@@ -18,6 +18,7 @@
 		BFDA3DD31586866E005103A0 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFDA3DD11586866E005103A0 /* MainViewController.xib */; };
 		BFDA3DD61586866E005103A0 /* FlipsideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFDA3DD41586866E005103A0 /* FlipsideViewController.xib */; };
 		BFDA3DE31587ED84005103A0 /* EventClass.m in Sources */ = {isa = PBXBuildFile; fileRef = BFDA3DE21587ED84005103A0 /* EventClass.m */; };
+		BFDA3DE515883E1E005103A0 /* eventPList.plist in Resources */ = {isa = PBXBuildFile; fileRef = BFDA3DE415883E1E005103A0 /* eventPList.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		BFDA3DE01587EB04005103A0 /* EventProto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventProto.h; sourceTree = "<group>"; };
 		BFDA3DE11587ED84005103A0 /* EventClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventClass.h; path = ../EventClass.h; sourceTree = "<group>"; };
 		BFDA3DE21587ED84005103A0 /* EventClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventClass.m; path = ../EventClass.m; sourceTree = "<group>"; };
+		BFDA3DE415883E1E005103A0 /* eventPList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = eventPList.plist; path = ../eventPList.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 		BFDA3DC01586866E005103A0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BFDA3DE415883E1E005103A0 /* eventPList.plist */,
 				BFDA3DC11586866E005103A0 /* EventPlanner-Info.plist */,
 				BFDA3DC21586866E005103A0 /* InfoPlist.strings */,
 				BFDA3DC51586866E005103A0 /* main.m */,
@@ -166,6 +169,7 @@
 				BFDA3DC41586866E005103A0 /* InfoPlist.strings in Resources */,
 				BFDA3DD31586866E005103A0 /* MainViewController.xib in Resources */,
 				BFDA3DD61586866E005103A0 /* FlipsideViewController.xib in Resources */,
+				BFDA3DE515883E1E005103A0 /* eventPList.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
