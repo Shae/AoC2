@@ -20,13 +20,20 @@
 
 @interface AddEventViewController : UIViewController <UITextFieldDelegate>
 {
-    id <EventViewDelegate> Delegate;
+    id <EventViewDelegate> Delegate;  // Why does a protocol need an ID?  Isn't it already part of the fun since its at the top of this file?
     __weak IBOutlet UITextField *nameField;
     __weak IBOutlet UIButton *backgroundBtn;
+    __weak IBOutlet UIDatePicker *datePicker;
+    NSString *newDate;
+    NSString *eventData;
+
 }
 
 @property (strong) id<EventViewDelegate> Delegate;
 
+
+-(IBAction)onTouch:(id)sender;
+-(IBAction)onChange:(id)sender;
 
 -(IBAction)backToMain:(id)sender;
 

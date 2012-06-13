@@ -18,14 +18,12 @@
 
 
 
-
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     
     if (self) {
         Delegate = nil;
-        // Custom initialization
     }
     
     return self;
@@ -41,6 +39,7 @@
 {
     nameField = nil;
     backgroundBtn = nil;
+    datePicker = nil;
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -50,18 +49,6 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-
-///////////////
-
-
--(IBAction)backToMain:(id)sender
-{
-    if (Delegate != nil) {
-        [Delegate didClose:nameField.text];
-        
-    }
-    [self dismissModalViewControllerAnimated:YES];
-}
 
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
 {
@@ -76,8 +63,64 @@
     return YES;
 }
 
+-(IBAction)onTouch:(id)sender
+{
+    if (nameField.isFirstResponder) {
+        [nameField resignFirstResponder];
+    }    
+    
+}
+
+-(IBAction)onChange:(id)sender
+{
+    UIDatePicker *dateSelector = (UIDatePicker*) sender;
+       if (dateSelector != nil) {
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        if (dateFormatter != nil) {
+            [dateFormatter setDateFormat:@"MMMM dd, @ hh:mm a"];
+        }
+        newDate = [dateFormatter stringFromDate:dateSelector.date];
+        NSLog(@"%@", newDate);
+
+    }
+
+}
+
 -(IBAction)closeKeyboard
 {
     [nameField resignFirstResponder];
 }
+
+-(IBAction)backToMain:(id)sender
+{   
+
+    if ((Delegate != nil) && (newDate != nil)){
+        
+    //Name labe data  
+        [Delegate didClose:nameField.text];
+
+    //Picker View data
+         NSLog(@"%@", [newDate description]);
+        
+    //Concatenate da stuffes
+        eventData = [NSString stringWithFormat:@"%@ on %@", nameField.text, newDate];
+        NSLog(@"%@", eventData);
+        
+    //return to Main page 
+        [self dismissModalViewControllerAnimated:YES];
+        
+    }
+            /*else {
+                UIAlertView *alert = [[UIAlertView alloc] 
+                  initWithTitle:@"-Event Error-"
+                  message:@"Missing Event Name or Date"
+                  delegate: self 
+                  cancelButtonTitle:@"Close"
+                  otherButtonTitles: nil];
+                [alert show]; 
+            }*/
+    
+}
+
+
 @end
