@@ -25,22 +25,21 @@
 
 -(void)viewDidAppear:(BOOL)animated
 {
-    for (NSString *n in eventlist){
+   /* for (NSString *n in eventlist){
         NSLog(@"%@", n);
         eventField.text = n;
 
-    } 
+    } */
     
-
     
-    NSLog(@"TEST ARRAY FEED: %@", eventlist);
+    //NSLog(@"TEST ARRAY FEED: %@", eventlist);
 }
 
 -(void)didClose: (NSString *) passEventData
 {
-    //eventLabel.text = passEventData;
-    eventField.text = passEventData;
-    [eventlist addObject:passEventData];  // WHY ISNT THIS WORKING???
+
+    eventField.text = [eventField.text stringByAppendingString:passEventData];
+    //[eventlist addObject:passEventData];  
 }
 
 - (void)viewDidUnload

@@ -77,7 +77,7 @@
        if (dateSelector != nil) {
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
         if (dateFormatter != nil) {
-            [dateFormatter setDateFormat:@"MMMM dd, @ hh:mm a"];
+            [dateFormatter setDateFormat:@"MMMM dd, @ h:mm a"];
         }
         newDate = [dateFormatter stringFromDate:dateSelector.date];
         NSLog(@"%@", newDate);
@@ -95,32 +95,16 @@
 {   
 
     if ((Delegate != nil) && (newDate != nil)){
-        
-    //Name labe data  
-        //[Delegate didClose:nameField.text];
-
-    //Picker View data
-        // NSLog(@"%@", [newDate description]);
-        
+            
     //Concatenate da stuffes
-        eventData = [NSString stringWithFormat:@"%@ on %@", nameField.text, newDate];
-       // NSLog(@"%@", eventData);
+        eventData = [NSString stringWithFormat:@"%@    on    %@", nameField.text, newDate];
+        // NSLog(@"%@", eventData);
         
     //return to Main page 
         [Delegate didClose:eventData];
         [self dismissModalViewControllerAnimated:YES];
         
     }
-            /*else {
-                UIAlertView *alert = [[UIAlertView alloc] 
-                  initWithTitle:@"-Event Error-"
-                  message:@"Missing Event Name or Date"
-                  delegate: self 
-                  cancelButtonTitle:@"Close"
-                  otherButtonTitles: nil];
-                [alert show]; 
-            }*/
-    
 }
 
 

@@ -33,6 +33,7 @@
 
 
 -(IBAction)onTouch:(id)sender;
+
 -(IBAction)onChange:(id)sender;
 
 -(IBAction)backToMain:(id)sender;
