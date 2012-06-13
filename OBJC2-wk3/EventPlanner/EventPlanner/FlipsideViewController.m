@@ -7,6 +7,7 @@
 //
 
 #import "FlipsideViewController.h"
+#import "EventProto.h"
 
 @interface FlipsideViewController ()
 
@@ -14,9 +15,11 @@
 
 @implementation FlipsideViewController
 
+
 @synthesize eventField = _eventField;
-@synthesize locationField = _locationField;
 @synthesize delegate = _delegate;
+@synthesize datePicker = _datePicker;
+
 
 - (void)viewDidLoad
 {
@@ -27,7 +30,13 @@
 - (void)viewDidUnload
 {
     [self setEventField:nil];
-    [self setLocationField:nil];
+    [self setDatePicker:nil];
+
+    
+    _datePicker = nil;
+    _eventField = nil;
+
+
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -39,17 +48,27 @@
 
 #pragma mark - Actions
 
+
+//// From Protocol ////
+
+-(void) saveToArray{
+    
+}
+
+-(void) loadArray{
+
+}
+
+///// End from Protocol /////
 - (IBAction)done:(id)sender
 {
     [self.delegate flipsideViewControllerDidFinish:self];
 }
 
 
-- (IBAction)dismissKeyboard:(id)sender {
-    [cost resignFirstResponder];
-    [income resignFirstResponder];  
+- (IBAction)dismissKeyboard:(id)sender {  //Large hidden button in background
+    [_eventField resignFirstResponder];
 }
 
-- (IBAction)saveBtn:(id)sender {
-}
+
 @end

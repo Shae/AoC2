@@ -17,6 +17,7 @@
 		BFDA3DD01586866E005103A0 /* FlipsideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFDA3DCF1586866E005103A0 /* FlipsideViewController.m */; };
 		BFDA3DD31586866E005103A0 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFDA3DD11586866E005103A0 /* MainViewController.xib */; };
 		BFDA3DD61586866E005103A0 /* FlipsideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFDA3DD41586866E005103A0 /* FlipsideViewController.xib */; };
+		BFDA3DE31587ED84005103A0 /* EventClass.m in Sources */ = {isa = PBXBuildFile; fileRef = BFDA3DE21587ED84005103A0 /* EventClass.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,9 @@
 		BFDA3DCF1586866E005103A0 /* FlipsideViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlipsideViewController.m; sourceTree = "<group>"; };
 		BFDA3DD21586866E005103A0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainViewController.xib; sourceTree = "<group>"; };
 		BFDA3DD51586866E005103A0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FlipsideViewController.xib; sourceTree = "<group>"; };
+		BFDA3DE01587EB04005103A0 /* EventProto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventProto.h; sourceTree = "<group>"; };
+		BFDA3DE11587ED84005103A0 /* EventClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventClass.h; path = ../EventClass.h; sourceTree = "<group>"; };
+		BFDA3DE21587ED84005103A0 /* EventClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventClass.m; path = ../EventClass.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +88,8 @@
 			children = (
 				BFDA3DC81586866E005103A0 /* AppDelegate.h */,
 				BFDA3DC91586866E005103A0 /* AppDelegate.m */,
+				BFDA3DE11587ED84005103A0 /* EventClass.h */,
+				BFDA3DE21587ED84005103A0 /* EventClass.m */,
 				BFDA3DCB1586866E005103A0 /* MainViewController.h */,
 				BFDA3DCC1586866E005103A0 /* MainViewController.m */,
 				BFDA3DCE1586866E005103A0 /* FlipsideViewController.h */,
@@ -91,6 +97,7 @@
 				BFDA3DD11586866E005103A0 /* MainViewController.xib */,
 				BFDA3DD41586866E005103A0 /* FlipsideViewController.xib */,
 				BFDA3DC01586866E005103A0 /* Supporting Files */,
+				BFDA3DE01587EB04005103A0 /* EventProto.h */,
 			);
 			path = EventPlanner;
 			sourceTree = "<group>";
@@ -173,6 +180,7 @@
 				BFDA3DCA1586866E005103A0 /* AppDelegate.m in Sources */,
 				BFDA3DCD1586866E005103A0 /* MainViewController.m in Sources */,
 				BFDA3DD01586866E005103A0 /* FlipsideViewController.m in Sources */,
+				BFDA3DE31587ED84005103A0 /* EventClass.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

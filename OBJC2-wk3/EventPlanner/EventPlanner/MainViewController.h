@@ -7,8 +7,9 @@
 //
 
 #import "FlipsideViewController.h"
+#import "EventProto.h"
 
-@interface MainViewController : UIViewController <FlipsideViewControllerDelegate>
+@interface MainViewController : UIViewController <FlipsideViewControllerDelegate, EventProto>
 
 - (IBAction)showInfo:(id)sender;
 

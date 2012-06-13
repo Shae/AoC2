@@ -7,25 +7,40 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EventProto.h"
 
 @class FlipsideViewController;
 
 @protocol FlipsideViewControllerDelegate
+
+
 - (void)flipsideViewControllerDidFinish:(FlipsideViewController *)controller;
+
 @end
 
-@interface FlipsideViewController : UIViewController
+@interface FlipsideViewController : UIViewController <EventProto>
+{
+    
 
+    __weak IBOutlet UIDatePicker *_datePicker;
 
-@property (weak, nonatomic) IBOutlet UITextField *eventField;
+    __weak IBOutlet UITextField *_eventField;
+    
 
-@property (weak, nonatomic) IBOutlet UITextField *locationField;
+}
 
-@property (weak, nonatomic) id <FlipsideViewControllerDelegate> delegate;
+-(void) saveToArray;
+-(void) loadArray;
 
-- (IBAction)saveBtn:(id)sender;
 
 - (IBAction)done:(id)sender;
 
 - (IBAction)dismissKeyboard:(id)sender;
+
+@property (weak, nonatomic) IBOutlet UITextField *eventField;
+
+@property (weak, nonatomic) id <FlipsideViewControllerDelegate> delegate;
+
+@property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
+
 @end
