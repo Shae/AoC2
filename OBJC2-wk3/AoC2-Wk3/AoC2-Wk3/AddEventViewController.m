@@ -97,7 +97,7 @@
     if ((Delegate != nil) && (newDate != nil)){
             
     //Concatenate da stuffes
-        eventData = [NSString stringWithFormat:@"%@    on    %@", nameField.text, newDate];
+        eventData = [NSString stringWithFormat:@"%@ \n \t on    %@ \n \n", nameField.text, newDate];
         // NSLog(@"%@", eventData);
         
     //return to Main page 
