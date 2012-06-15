@@ -14,7 +14,7 @@
 
 @implementation AddEventViewController
 @synthesize Delegate;
-
+@synthesize minimumDate;
 
 
 
@@ -32,6 +32,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+   // minimumDate = [ NSDate dateToday]; 
+    datePicker.minimumDate = [NSDate date];
+
 	// Do any additional setup after loading the view.
 }
 
@@ -94,18 +97,13 @@
 -(IBAction)backToMain:(id)sender
 {   
 
-    if ((Delegate != nil) && (newDate != nil)){
-            
-    //Concatenate da stuffes
+    if ((Delegate != nil) && (newDate != nil)){    
+        //Concatenate da stuffes
         eventData = [NSString stringWithFormat:@"%@ \n \t on    %@ \n \n", nameField.text, newDate];
-        // NSLog(@"%@", eventData);
-        
-    //return to Main page 
+        //return to Main page 
         [Delegate didClose:eventData];
-        [self dismissModalViewControllerAnimated:YES];
-        
     }
-}
+    [self dismissModalViewControllerAnimated:YES];}
 
 
 @end

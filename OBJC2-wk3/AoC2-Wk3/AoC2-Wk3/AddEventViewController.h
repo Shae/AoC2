@@ -30,7 +30,7 @@
 }
 
 @property (strong) id<EventViewDelegate> Delegate;
-
+@property(nonatomic,retain) NSDate        *minimumDate;   
 
 -(IBAction)onTouch:(id)sender;
 

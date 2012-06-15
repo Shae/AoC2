@@ -35,12 +35,15 @@
     //NSLog(@"TEST ARRAY FEED: %@", eventlist);
 }
 
+
 -(void)didClose: (NSString *) passEventData
 {
 
     eventField.text = [eventField.text stringByAppendingString:passEventData];
     //[eventlist addObject:passEventData];  
 }
+
+
 
 - (void)viewDidUnload
 {
