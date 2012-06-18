@@ -10,4 +10,7 @@
 
 @protocol eventProtocol <NSObject>
 
+@required
+-(void) passInfo: (NSString *) passEventData;
+
 @end

@@ -7,13 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NewEventViewController.h"
+#import "eventProtocol.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <newEventDelegate>
 {
     IBOutlet UILabel *slideRight;
     IBOutlet UITextView *textView;
-    
-    
 }
+
+-(void) passInfo:(NSString *) passEventData;  // from Protocol
+-(void) onSlideRight;
 
 @end

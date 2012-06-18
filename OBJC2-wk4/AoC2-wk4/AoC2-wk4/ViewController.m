@@ -31,4 +31,19 @@
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
+-(void) passInfo: (NSString *) passEventData;
+{
+    
+};
+
+-(void) onSlideRight
+{
+    NewEventViewController *newPage = [[NewEventViewController alloc]
+        initWithNibName:@"AddEvent" bundle:nil];
+    if (newPage != nil){
+        newPage.delegate = self;
+        [self presentModalViewController:newPage animated:YES];
+    }
+}
+
 @end
