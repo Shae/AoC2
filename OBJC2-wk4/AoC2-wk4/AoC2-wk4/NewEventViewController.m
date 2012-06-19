@@ -26,6 +26,14 @@
     return self;
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    slideLeft.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"slideBarLeft.png"]];
+    leftSwipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(onSlideLeft:)];
+    leftSwipe.direction = UISwipeGestureRecognizerDirectionLeft;
+    [slideLeft addGestureRecognizer:leftSwipe];
+}
+
 - (void)viewDidLoad
 {
     eventname.text = @"Enter Event Name";
@@ -56,5 +64,36 @@
 {
     return YES;
 }
+
+-(IBAction)onChange:(id)sender
+{
+    UIDatePicker *dateSelector = (UIDatePicker*) sender;
+    if (dateSelector != nil) {
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        if (dateFormatter != nil) {
+            [dateFormatter setDateFormat:@"MMMM dd, @ h:mm a"];
+        }
+        newDate = [dateFormatter stringFromDate:dateSelector.date];
+        NSLog(@"%@", newDate);
+        
+    }
+    
+}
+
+-(IBAction)closeKeyboard
+{
+    [eventname resignFirstResponder];
+}
+
+-(void) onSlideLeft: (UISwipeGestureRecognizer*) recog
+{
+
+    if (recog.direction == UISwipeGestureRecognizerDirectionLeft) {
+        [self dismissModalViewControllerAnimated:YES];
+    }
+}
+
+
+
 
 @end

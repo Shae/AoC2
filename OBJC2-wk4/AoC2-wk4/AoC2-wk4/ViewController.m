@@ -14,6 +14,15 @@
 
 @implementation ViewController
 
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    
+    rightSwipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(onSlideRight:)]; 
+    rightSwipe.direction = UISwipeGestureRecognizerDirectionRight;
+    [slideRight addGestureRecognizer:rightSwipe];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -22,6 +31,7 @@
 
 - (void)viewDidUnload
 {
+
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -31,19 +41,23 @@
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
--(void) passInfo: (NSString *) passEventData;
+-(void) passInfo: (NSString *) passEventName : (NSString*) passEventDate
 {
     
 };
 
--(void) onSlideRight
+-(void) onSlideRight: (UISwipeGestureRecognizer*) recog
 {
-    NewEventViewController *newPage = [[NewEventViewController alloc]
-        initWithNibName:@"AddEvent" bundle:nil];
-    if (newPage != nil){
-        newPage.delegate = self;
-        [self presentModalViewController:newPage animated:YES];
+    if (recog.direction == UISwipeGestureRecognizerDirectionRight) {
+        NewEventViewController *newPage = [[NewEventViewController alloc] initWithNibName:@"newEvent" bundle:nil];
+        if (newPage != nil){
+            newPage.theDel = self;
+            newPage.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;        
+            //  UIModalTransitionStyleCrossDissolve;
+            [self presentModalViewController:newPage animated:YES];
+        }
     }
+
 }
 
 @end

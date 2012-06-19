@@ -11,6 +11,6 @@
 @protocol eventProtocol <NSObject>
 
 @required
--(void) passInfo: (NSString *) passEventData;
+-(void) passInfo: (NSString *) passEventName : (NSString*) passEventDate;
 
 @end

@@ -14,6 +14,7 @@
 
     IBOutlet UITextView *eventField;
     NSMutableArray *eventlist;
+    
 
 }
 

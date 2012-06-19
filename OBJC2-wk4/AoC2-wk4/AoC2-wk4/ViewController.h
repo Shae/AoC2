@@ -10,13 +10,15 @@
 #import "NewEventViewController.h"
 #import "eventProtocol.h"
 
-@interface ViewController : UIViewController <newEventDelegate>
+@interface ViewController : UIViewController <eventProtocol>
 {
     IBOutlet UILabel *slideRight;
     IBOutlet UITextView *textView;
+    UISwipeGestureRecognizer *rightSwipe;
 }
+  
 
--(void) passInfo:(NSString *) passEventData;  // from Protocol
--(void) onSlideRight;
+-(void) passInfo: (NSString *) passEventName : (NSString*) passEventDate;  // from Protocol
+-(void) onSlideRight: (UISwipeGestureRecognizer*) recog;
 
 @end

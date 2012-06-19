@@ -103,7 +103,8 @@
         //return to Main page 
         [Delegate didClose:eventData];
     }
-    [self dismissModalViewControllerAnimated:YES];}
+    [self dismissModalViewControllerAnimated:YES];
+}
 
 
 @end

@@ -25,14 +25,7 @@
 
 -(void)viewDidAppear:(BOOL)animated
 {
-   /* for (NSString *n in eventlist){
-        NSLog(@"%@", n);
-        eventField.text = n;
 
-    } */
-    
-    
-    //NSLog(@"TEST ARRAY FEED: %@", eventlist);
 }
 
 
