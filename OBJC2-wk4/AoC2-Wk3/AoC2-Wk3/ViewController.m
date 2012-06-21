@@ -13,6 +13,7 @@
 @end
 
 @implementation ViewController
+@synthesize save;
 @synthesize eventlist;
 
 
@@ -26,8 +27,17 @@
 
 - (void)viewDidLoad
 {
+    eventlist = [[NSMutableArray alloc] init];  
+    // Get the stored data before the view loads
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    NSString *saveData = [defaults objectForKey:@"saveData"];
+    
+    // Update the UI elements with the saved data
+    eventField.text = saveData;
+
     [super viewDidLoad];
-    eventlist = [[NSMutableArray alloc] init];
+
     
 	// Do any additional setup after loading the view, typically from a nib.
 }
@@ -50,6 +60,7 @@
 - (void)viewDidUnload
 {
     addEventLabel = nil;
+    [self setSave:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -72,6 +83,22 @@
         }
     }
     
+}
+
+-(IBAction)onSave:(id)sender{
+
+        // Create strings and integer to store the text info
+        NSString *saveData = [eventField text];
+        
+        // Store the data
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        
+        [defaults setObject:saveData forKey:@"saveData"];
+   
+        [defaults synchronize];
+        
+        NSLog(@"Data saved");
+
 }
 
 

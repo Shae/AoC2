@@ -19,7 +19,9 @@
     
 
 }
+@property (weak, nonatomic) IBOutlet UIButton *save;
 
 @property (nonatomic, retain) NSMutableArray *eventlist;
 -(void) onSlideRight: (UISwipeGestureRecognizer*) recog;
+-(IBAction)onSave:(id)sender;
 @end
