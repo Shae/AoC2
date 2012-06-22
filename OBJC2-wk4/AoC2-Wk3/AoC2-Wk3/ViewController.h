@@ -24,4 +24,6 @@
 @property (nonatomic, retain) NSMutableArray *eventlist;
 -(void) onSlideRight: (UISwipeGestureRecognizer*) recog;
 -(IBAction)onSave:(id)sender;
+-(IBAction)clearDefaults:(id)sender;
+
 @end

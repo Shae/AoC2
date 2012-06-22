@@ -101,7 +101,15 @@
 
 }
 
-
+-(IBAction)clearDefaults:(id)sender {
+    eventField.text = @""; 
+    NSUserDefaults * defs = [NSUserDefaults standardUserDefaults];
+    NSDictionary * dict = [defs dictionaryRepresentation];
+    for (id key in dict) {
+        [defs removeObjectForKey:key];
+    }
+    [defs synchronize];
+}
 
 
 @end

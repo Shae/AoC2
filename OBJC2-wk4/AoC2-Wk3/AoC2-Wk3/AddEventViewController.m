@@ -43,7 +43,7 @@
     
    // minimumDate = [ NSDate dateToday]; 
     datePicker.minimumDate = [NSDate date];
-    nameField.text = @"Enter Event Name2";
+    nameField.text = @"Enter Event Name";
 	// Do any additional setup after loading the view.
 }
 
@@ -110,10 +110,9 @@
 {
     
     if (recog.direction == UISwipeGestureRecognizerDirectionLeft) {
-        if ((nameField.text != nil) && (nameField.text != @"Enter Event Name2") )
+        if ((nameField.text != @"") && (nameField.text != @"Enter Event Name") )
         {   
             if (newDate != nil){
-                //Concatenate da stuffes
                 eventData = [NSString stringWithFormat:@"%@ \n \t on    %@ \n \n", nameField.text, newDate];
                 //return to Main page 
                 [Delegate didClose:eventData];
